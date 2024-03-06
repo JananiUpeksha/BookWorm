@@ -2,17 +2,10 @@ package org.example.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.example.bo.UserBO;
 import org.example.bo.UserBOimpl;
-import org.example.dao.UserDAO;
-import org.example.dao.UserDAOimpl;
-import org.example.dto.UserDto;
-import org.example.entity.User;
-
-import java.sql.SQLException;
 
 public class RejistrationController {
     private UserBO userBO = new UserBOimpl();
@@ -31,7 +24,7 @@ public class RejistrationController {
 
     @FXML
     void btnSigninOnAction(ActionEvent event) {
-        UserDAO userDAO = new UserDAOimpl();
+        /*UserDAO userDAO = new UserDAOimpl();
         String email = txtEmail.getText();
         String name = txtName.getText();
         String password = txtPassword.getText();
@@ -47,6 +40,6 @@ public class RejistrationController {
             new Alert(Alert.AlertType.CONFIRMATION, " User Saved Successfully!").show();
         } else {
             new Alert(Alert.AlertType.INFORMATION, "User not Saved!").show();
-        }
+        }*/
     }
 }

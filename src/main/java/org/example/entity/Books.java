@@ -9,6 +9,13 @@ import java.util.List;
 
 @Entity
 public class Books {
+    public Books(String title, String author, String genre, boolean availability) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+    }
+
     @Override
     public String toString() {
         return "Books{" +
@@ -28,7 +35,7 @@ public class Books {
     private boolean availability = true;
 
     @ManyToMany
-    private List<User> user;
+    private List<Users> user;
 
     @ManyToOne
     private Branches branch;
@@ -37,7 +44,7 @@ public class Books {
     public Books() {
     }
 
-    public Books(String title, String author, String genre, boolean availability, List<User> user, Branches branch) {
+    public Books(String title, String author, String genre, boolean availability, List<Users> user, Branches branch) {
         this.title = title;
         this.author = author;
         this.genre = genre;
@@ -78,11 +85,11 @@ public class Books {
         this.availability = availability;
     }
 
-    public List<User> getUser() {
+    public List<Users> getUser() {
         return user;
     }
 
-    public void setUser(List<User> user) {
+    public void setUser(List<Users> user) {
         this.user = user;
     }
 

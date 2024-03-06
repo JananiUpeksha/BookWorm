@@ -1,4 +1,7 @@
 package config;
+import org.example.entity.Books;
+import org.example.entity.Branches;
+import org.example.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,7 +21,7 @@ public class FactoryConfiguration {
         } catch (IOException e) {
             System.out.println(e.getMessage());;
         }
-        Configuration configuration = new Configuration().addProperties(properties);
+        Configuration configuration = new Configuration().addProperties(properties).addAnnotatedClass(Users.class).addAnnotatedClass(Books.class).addAnnotatedClass(Branches.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

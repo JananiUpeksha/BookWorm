@@ -1,7 +1,7 @@
 package org.example.dao;
 
 import config.FactoryConfiguration;
-import org.example.entity.User;
+import org.example.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -46,7 +46,7 @@ public class UserDAOimpl implements UserDAO {
         return true;
     }*/
     @Override
-    public boolean save(User user) {
+    public boolean save(Users user) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(user);
@@ -61,7 +61,7 @@ public class UserDAOimpl implements UserDAO {
     public boolean delete(int id) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            User user = session.get(User.class, id);
+            Users user = session.get(Users.class, id);
             if (user != null) {
                 session.delete(user);
                 transaction.commit();
@@ -74,7 +74,7 @@ public class UserDAOimpl implements UserDAO {
         }
     }
     @Override
-    public boolean update(User user) {
+    public boolean update(Users user) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.update(user);
@@ -100,20 +100,21 @@ public class UserDAOimpl implements UserDAO {
             e.printStackTrace();
             return false;
         }*/
+
     }
     @Override
-    public User getUser(int id) {
+    public Users getUser(int id) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            return session.get(User.class, id);
+            return session.get(Users.class, id);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
     @Override
-    public List<User> getAll() {
+    public List<Users> getAll() {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            Query<User> query = session.createQuery("FROM User", User.class);
+            Query<Users> query = session.createQuery("FROM Users", Users.class);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();

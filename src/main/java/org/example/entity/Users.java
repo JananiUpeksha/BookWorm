@@ -1,12 +1,11 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-import org.example.dto.UserDto;
 
 import java.util.List;
 
 @Entity
-public class User extends UserDto {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -19,10 +18,10 @@ public class User extends UserDto {
     @ManyToOne
     private Branches branch;
 
-    public User() {
+    public Users() {
     }
 
-    public User(String email, String name, String password, List<Books> books, Branches branch) {
+    public Users(String email, String name, String password, List<Books> books, Branches branch) {
         //this.id = id;
         this.email = email;
         this.name = name;
@@ -31,7 +30,7 @@ public class User extends UserDto {
         this.branch = branch;
     }
 
-    public User(String email, String name, String password) {
+    public Users(String email, String name, String password) {
         this.email = email;
         this.name = name;
         this.password = password;
@@ -41,10 +40,10 @@ public class User extends UserDto {
         return id;
     }
 
-    public void setId(int id) {
+   /* public void setId(int id) {
         this.id = id;
     }
-
+*/
     public String getEmail() {
         return email;
     }

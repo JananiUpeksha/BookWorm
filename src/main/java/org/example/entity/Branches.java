@@ -2,7 +2,6 @@ package org.example.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class Branches {
     private String branchAdmin;
 
     @OneToMany(mappedBy = "branch")
-    private List<User> users;
+    private List<Users> users;
 
     @OneToMany(mappedBy = "branch")
     private List<Books> books;
@@ -25,7 +24,7 @@ public class Branches {
     public Branches() {
     }
 
-    public Branches(String branchName, String location, String branchAdmin, List<User> users, List<Books> books) {
+    public Branches(String branchName, String location, String branchAdmin, List<Users> users, List<Books> books) {
         this.branchName = branchName;
         this.location = location;
         this.branchAdmin = branchAdmin;
@@ -57,11 +56,11 @@ public class Branches {
         this.branchAdmin = branchAdmin;
     }
 
-    public List<User> getUsers() {
+    public List<Users> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<Users> users) {
         this.users = users;
     }
 

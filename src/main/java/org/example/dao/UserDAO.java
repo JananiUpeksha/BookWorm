@@ -1,17 +1,13 @@
 package org.example.dao;
 
-import config.FactoryConfiguration;
-import org.example.entity.User;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+import org.example.entity.Users;
 
 import java.util.List;
 
 public interface UserDAO extends SuperDAO{
-    public boolean save(User user);
+    public boolean save(Users user);
     public boolean delete(int id);
-    public boolean update(User user);
-    public User getUser(int id);
-    public List<User> getAll();
+    public boolean update(Users user);
+    public Users getUser(int id);
+    public List<Users> getAll();
 }

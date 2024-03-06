@@ -14,17 +14,17 @@
                 <Image url="@../../../../../../Downloads/content.jpg" />
             </image>
         </ImageView>
-        <TextField fx:id="txtName" layoutX="479.0" layoutY="83.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtName" layoutX="87.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtPassword" layoutX="87.0" layoutY="166.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtPassword" layoutX="454.0" layoutY="144.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtEmail" layoutX="479.0" layoutY="166.0" prefHeight="45.0" prefWidth="256.0" promptText="E- Mail" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtEmail" layoutX="210.0" layoutY="215.0" prefHeight="45.0" prefWidth="365.0" promptText="E- Mail" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
@@ -49,10 +49,15 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-      <TextField fx:id="txtId" layoutX="81.0" layoutY="94.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtId" layoutX="87.0" layoutY="47.0" prefHeight="45.0" prefWidth="256.0" promptText="ID" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
+      <Button layoutX="454.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

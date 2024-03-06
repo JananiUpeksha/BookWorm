@@ -1,15 +1,15 @@
 package org.example.bo;
 
 import org.example.dto.UserDto;
-import org.example.entity.User;
+import org.example.entity.Users;
 
 import java.util.List;
 
 public interface UserBO extends SuperBO{
-    public boolean save(UserDto dto);
-    public static boolean delete(int id);
+    public boolean save(Users dto);
+    public  boolean delete(int id);
     public boolean update(UserDto dto);
-    public User getUser(int id);
-    public List<User> getAll();
+    public Users getUser(int id);
+    public List<Users> getAll();
 
 }

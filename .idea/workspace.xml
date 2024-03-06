@@ -5,15 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/FactoryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/FactoryConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookIssueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Branches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Branches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BookIssue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BookIssue.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +66,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/janani/IdeaProjects/BookWorm/src/main/resources/assets",
+    "last_opened_file_path": "/home/janani/Desktop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,7 +102,8 @@
       <workItem from="1709472127280" duration="2639000" />
       <workItem from="1709540091899" duration="9048000" />
       <workItem from="1709646608762" duration="3002000" />
-      <workItem from="1709708571181" duration="12197000" />
+      <workItem from="1709708571181" duration="14992000" />
+      <workItem from="1709735305800" duration="10748000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@
     <children>
         <ImageView fitHeight="602.0" fitWidth="836.0" layoutX="-2.0">
             <image>
-                <Image url="@../../../../../../Downloads/content.jpg" />
+                <Image url="@../assets/content.jpg" />
             </image>
         </ImageView>
         <TextField fx:id="txtTitle" layoutX="87.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
@@ -30,17 +30,17 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <Button layoutX="460.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="248.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
+        <Button layoutX="460.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="248.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="87.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="281.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Borrow">
+        <Button layoutX="112.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnBorrowOnAction" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Borrow">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-      <DatePicker layoutX="87.0" layoutY="292.0" prefHeight="45.0" prefWidth="281.0" promptText="Borrowed Date" />
-      <DatePicker layoutX="87.0" layoutY="371.0" prefHeight="45.0" prefWidth="281.0" promptText="ReturnDate" />
+      <DatePicker fx:id="borrowDate" layoutX="112.0" layoutY="292.0" prefHeight="45.0" prefWidth="256.0" promptText="Borrowed Date" />
+      <DatePicker fx:id="returnDate" layoutX="112.0" layoutY="371.0" prefHeight="45.0" prefWidth="256.0" promptText="ReturnDate" />
     </children>
 </AnchorPane>

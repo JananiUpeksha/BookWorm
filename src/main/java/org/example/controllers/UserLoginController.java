@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.UserBO;
 import org.example.bo.UserBOimpl;
-import org.example.entity.User;
+import org.example.entity.Users;
 
 import java.io.IOException;
 import java.util.List;
@@ -48,11 +48,11 @@ public class UserLoginController {
             return;
         }
 
-        List<User> users = userBO.getAll();
+        List<Users> users = userBO.getAll();
 
         // Check if any user has the provided username and password
         boolean userFound = false;
-        for (User user : users) {
+        for (Users user : users) {
             if (user.getName().equals(username) && user.getPassword().equals(password)) {
                 userFound = true;
                 break;

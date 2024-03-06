@@ -14,17 +14,17 @@
                 <Image url="@../../../../../../Downloads/content.jpg" />
             </image>
         </ImageView>
-        <TextField fx:id="txtName" layoutX="81.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtName" layoutX="479.0" layoutY="83.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtPassword" layoutX="472.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtPassword" layoutX="87.0" layoutY="166.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtEmail" layoutX="196.0" layoutY="173.0" prefHeight="45.0" prefWidth="425.0" promptText="E- Mail" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtEmail" layoutX="479.0" layoutY="166.0" prefHeight="45.0" prefWidth="256.0" promptText="E- Mail" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
@@ -49,5 +49,10 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
+      <TextField fx:id="txtId" layoutX="81.0" layoutY="94.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
     </children>
 </AnchorPane>

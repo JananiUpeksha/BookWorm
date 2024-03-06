@@ -21,4 +21,66 @@ public class Branches {
 
     @OneToMany(mappedBy = "branch")
     private List<Books> books;
+
+    public Branches() {
+    }
+
+    public Branches(String branchName, String location, String branchAdmin, List<User> users, List<Books> books) {
+        this.branchName = branchName;
+        this.location = location;
+        this.branchAdmin = branchAdmin;
+        this.users = users;
+        this.books = books;
+    }
+
+    public String getBranchName() {
+        return branchName;
+    }
+
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getBranchAdmin() {
+        return branchAdmin;
+    }
+
+    public void setBranchAdmin(String branchAdmin) {
+        this.branchAdmin = branchAdmin;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<Books> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Books> books) {
+        this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Branches{" +
+                "branchName='" + branchName + '\'' +
+                ", location='" + location + '\'' +
+                ", branchAdmin='" + branchAdmin + '\'' +
+                ", users=" + users +
+                ", books=" + books +
+                '}';
+    }
 }

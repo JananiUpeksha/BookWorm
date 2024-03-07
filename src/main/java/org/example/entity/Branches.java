@@ -32,6 +32,12 @@ public class Branches {
         this.books = books;
     }
 
+    public Branches(String branchName, String location, String branchAdmin) {
+        this.branchName = branchName;
+        this.location = location;
+        this.branchAdmin = branchAdmin;
+    }
+
     public String getBranchName() {
         return branchName;
     }

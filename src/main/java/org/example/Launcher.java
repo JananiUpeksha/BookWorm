@@ -12,7 +12,7 @@ public class Launcher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/views/UserMng.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/views/BranchMng.fxml"))));
         stage.centerOnScreen();
         stage.setTitle("Welcome");
 

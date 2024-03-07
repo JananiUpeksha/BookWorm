@@ -55,6 +55,11 @@ public class UserMngController {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
             //clearField();
         }*/
+        if (email.isEmpty() || name.isEmpty() || address.isEmpty()) {
+            // If any of the fields are empty, show an error message and return
+            new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
+            return;
+        }
         Users user = new Users(email, name, address);
 
         // Call save method of userBO

@@ -14,9 +14,6 @@ public class Users extends UserDto {
     private String name;
     private String password;
 
-    @Version
-    private int version;
-
     @ManyToMany(mappedBy = "user")
     private List<Books> books;
     @ManyToOne

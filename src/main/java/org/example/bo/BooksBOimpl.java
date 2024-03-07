@@ -51,6 +51,11 @@ public class BooksBOimpl implements BooksBO {
 
     @Override
     public List<Books> getAll() {
-        return null;
+        try {
+            return booksDAO.getAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

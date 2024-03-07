@@ -72,7 +72,7 @@ public class UserMngController {
         String name = txtName.getText();
         String password = txtPassword.getText();
 
-        UserDto userDto = new UserDto(email, name, password);
+        /*UserDto userDto = new UserDto(email, name, password);
         boolean isUpdated = userBO.update(userDto);
 
         if (isUpdated) {
@@ -80,6 +80,30 @@ public class UserMngController {
             // Clear fields or perform any other necessary action
         } else {
             new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
+        }*/
+        // Convert userId to int (assuming userId is a String representing the ID)
+        int userId = Integer.parseInt(txtId.getText());
+
+        // Retrieve the existing user by ID
+        Users existingUser = userBO.getUser(userId);
+
+        if (existingUser != null) {
+            // Update the user details
+            existingUser.setName(name);
+            existingUser.setEmail(email);
+            existingUser.setPassword(password);
+
+            // Call update method of userBO
+            boolean isUpdated = userBO.update(existingUser);
+
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "User updated successfully").show();
+                // Optionally, clear fields or perform any other necessary action
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
+            }
+        } else {
+            new Alert(Alert.AlertType.ERROR, "User not found").show();
         }
     }
 

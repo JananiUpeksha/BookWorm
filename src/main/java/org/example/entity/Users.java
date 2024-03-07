@@ -1,17 +1,21 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import org.example.dto.UserDto;
 
 import java.util.List;
 
 @Entity
-public class Users {
+public class Users extends UserDto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String email;
     private String name;
     private String password;
+
+    @Version
+    private int version;
 
     @ManyToMany(mappedBy = "user")
     private List<Books> books;

@@ -9,24 +9,6 @@ import java.util.List;
 
 @Entity
 public class Books {
-    public Books(String title, String author, String genre, boolean availability) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.availability = availability;
-    }
-
-    @Override
-    public String toString() {
-        return "Books{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", genre='" + genre + '\'' +
-                ", availability=" + availability +
-                ", user=" + user +
-                ", branch=" + branch +
-                '}';
-    }
 
     @Id
     private String title;
@@ -51,6 +33,24 @@ public class Books {
         this.availability = availability;
         this.user = user;
         this.branch = branch;
+    }
+    public Books(String title, String author, String genre, boolean availability) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+    }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", genre='" + genre + '\'' +
+                ", availability=" + availability +
+                ", user=" + user +
+                ", branch=" + branch +
+                '}';
     }
 
     public String getTitle() {

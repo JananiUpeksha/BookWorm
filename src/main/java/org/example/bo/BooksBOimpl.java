@@ -2,9 +2,7 @@ package org.example.bo;
 
 import org.example.dao.BooksDAO;
 import org.example.dao.DAOFactory;
-import org.example.dao.UserDAO;
 import org.example.entity.Books;
-import org.example.entity.Users;
 
 import java.util.List;
 
@@ -32,12 +30,17 @@ public class BooksBOimpl implements BooksBO {
     }
 
     @Override
-    public boolean update(Books books) {
-        return false;
+    public boolean update(Books dto) {
+        try {
+            return booksDAO.update(new Books(dto.getTitle(), dto.getAuthor(), dto.getAuthor(),dto.isAvailability()));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
-    public Users getBooks(String title) {
+    public Books getBooks(String title) {
         try {
             return booksDAO.getBooks(title);
         } catch (Exception e) {

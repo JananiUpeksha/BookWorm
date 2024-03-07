@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.example.bo.UserBO;
 import org.example.bo.UserBOimpl;
+import org.example.entity.Users;
 
 public class RejistrationController {
     private UserBO userBO = new UserBOimpl();
@@ -24,22 +25,27 @@ public class RejistrationController {
 
     @FXML
     void btnSigninOnAction(ActionEvent event) {
-        /*UserDAO userDAO = new UserDAOimpl();
+        // Retrieve user details from input fields
         String email = txtEmail.getText();
         String name = txtName.getText();
         String password = txtPassword.getText();
 
-        // Create a UserDto object
-        User user = new User(email, name, password);
-        userDAO.save(user);
+        // Create a new Users object with the retrieved details
+        Users user = new Users();
+        user.setEmail(email);
+        user.setName(name);
+        user.setPassword(password);
 
-        // Save user data
-        boolean success = userBO.save(user);
-        if (success) {
-            // Show success message
-            new Alert(Alert.AlertType.CONFIRMATION, " User Saved Successfully!").show();
+        // Call the save method of the UserBO to save the user
+        boolean saved = userBO.save(user);
+
+        if (saved) {
+            // User saved successfully, you can proceed with any further actions
+            System.out.println("User saved successfully!");
         } else {
-            new Alert(Alert.AlertType.INFORMATION, "User not Saved!").show();
-        }*/
+            // Error occurred while saving user
+            System.out.println("Failed to save user.");
+        }
+
     }
 }

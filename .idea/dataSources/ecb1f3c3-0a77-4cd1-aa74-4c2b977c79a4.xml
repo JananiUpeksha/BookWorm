@@ -1131,8 +1131,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="312" parent="1" name="BookWorm">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-03-07.20:51:33</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-03-07.09:51:33</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-03-08.02:19:31</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-03-07.15:19:31</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="313" parent="1" name="debian-sys-maint">

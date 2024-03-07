@@ -8,24 +8,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="602.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.BookIssueController">
+<AnchorPane fx:id="rootNode" prefHeight="602.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.BorrowController">
     <children>
         <ImageView fitHeight="602.0" fitWidth="836.0" layoutX="-2.0">
             <image>
                 <Image url="@../assets/content.jpg" />
             </image>
         </ImageView>
-        <TextField fx:id="txtTitle" layoutX="87.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtTitle" alignment="CENTER" layoutX="87.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtAuthor" layoutX="87.0" layoutY="170.0" prefHeight="45.0" prefWidth="256.0" promptText="Author" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtAuthor" alignment="CENTER" layoutX="87.0" layoutY="170.0" prefHeight="45.0" prefWidth="256.0" promptText="Author" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtAvailable" layoutX="460.0" layoutY="170.0" prefHeight="45.0" prefWidth="256.0" promptText="Available" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtAvailable" alignment="CENTER" layoutX="460.0" layoutY="170.0" prefHeight="45.0" prefWidth="256.0" promptText="Available" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
@@ -35,12 +35,12 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="112.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnBorrowOnAction" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Borrow">
+        <Button layoutX="93.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnBorrowOnAction" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Borrow">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-      <DatePicker fx:id="borrowDate" layoutX="112.0" layoutY="292.0" prefHeight="45.0" prefWidth="256.0" promptText="Borrowed Date" />
-      <DatePicker fx:id="returnDate" layoutX="112.0" layoutY="371.0" prefHeight="45.0" prefWidth="256.0" promptText="ReturnDate" />
+      <DatePicker fx:id="borrowDate" layoutX="93.0" layoutY="293.0" prefHeight="45.0" prefWidth="256.0" promptText="Borrowed Date" />
+      <DatePicker fx:id="returnDate" layoutX="93.0" layoutY="372.0" prefHeight="45.0" prefWidth="256.0" promptText="ReturnDate" />
     </children>
 </AnchorPane>

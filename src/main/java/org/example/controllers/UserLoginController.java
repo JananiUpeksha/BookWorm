@@ -60,7 +60,6 @@ public class UserLoginController {
         }
 
         if (userFound) {
-            new Alert(Alert.AlertType.INFORMATION, "Login successful!").show();
             Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserDash.fxml"));
             Scene scene = new Scene(rootNode);
             Stage Stage = (Stage)this.rootNode.getScene().getWindow();

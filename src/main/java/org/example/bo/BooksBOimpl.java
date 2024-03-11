@@ -1,17 +1,20 @@
 package org.example.bo;
 
 import org.example.dao.BooksDAO;
+import org.example.dao.BranchDAO;
+import org.example.dao.BranchDAOimpl;
 import org.example.dao.DAOFactory;
 import org.example.entity.Books;
 
 import java.util.List;
 
 public class BooksBOimpl implements BooksBO {
+    private BranchDAO branchDAO = new BranchDAOimpl();
     BooksDAO booksDAO = (BooksDAO)DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.BOOKS);
     @Override
     public boolean save(Books dto) {
         try {
-            Books newBooks = new Books(dto.getTitle(), dto.getAuthor(), dto.getGenre(), dto.isAvailability());
+            Books newBooks = new Books(dto.getTitle(), dto.getAuthor(), dto.getGenre(), dto.isAvailability(),dto.getBranch());
             return booksDAO.save(newBooks);
         } catch (Exception e) {
             e.printStackTrace();
@@ -32,7 +35,7 @@ public class BooksBOimpl implements BooksBO {
     @Override
     public boolean update(Books dto) {
         try {
-            return booksDAO.update(new Books(dto.getTitle(), dto.getAuthor(), dto.getAuthor(),dto.isAvailability()));
+            return booksDAO.update(new Books(dto.getTitle(), dto.getAuthor(), dto.getAuthor(),dto.isAvailability(),dto.getBranch()));
         } catch (Exception e) {
             e.printStackTrace();
             return false;

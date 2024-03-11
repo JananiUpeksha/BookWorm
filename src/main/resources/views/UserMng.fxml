@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,7 +12,7 @@
 
 <AnchorPane fx:id="rootNode" prefHeight="602.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.UserMngController">
     <children>
-        <ImageView fitHeight="602.0" fitWidth="836.0" layoutX="-2.0">
+        <ImageView fitHeight="820.0" fitWidth="1155.0" layoutX="-2.0">
             <image>
                 <Image url="@../../../../../../Downloads/content.jpg" />
             </image>
@@ -19,32 +22,32 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtPassword" layoutX="454.0" layoutY="144.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtPassword" layoutX="410.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtEmail" layoutX="210.0" layoutY="215.0" prefHeight="45.0" prefWidth="365.0" promptText="E- Mail" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtEmail" layoutX="713.0" layoutY="138.0" prefHeight="45.0" prefWidth="339.0" promptText="E- Mail" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <Button layoutX="196.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Save">
+        <Button layoutX="142.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Save">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="196.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Update">
+        <Button layoutX="372.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Update">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="196.0" layoutY="446.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
+        <Button layoutX="603.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="196.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Delete">
+        <Button layoutX="839.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Delete">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
@@ -54,10 +57,19 @@
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="454.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
+      <Button layoutX="372.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="187.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
+      <ComboBox fx:id="comboBranch" layoutX="796.0" layoutY="47.0" prefHeight="45.0" prefWidth="256.0" style="-fx-border-radius: 20;" />
+      <TableView fx:id="tblUser" layoutX="142.0" layoutY="374.0" prefHeight="368.0" prefWidth="907.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="185.0" text="User Name" />
+            <TableColumn fx:id="colPassword" prefWidth="185.0" text="Password" />
+            <TableColumn fx:id="colBranch" prefWidth="185.0" text="Branch" />
+            <TableColumn fx:id="colEmail" prefWidth="351.0" text="E-mail" />
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>

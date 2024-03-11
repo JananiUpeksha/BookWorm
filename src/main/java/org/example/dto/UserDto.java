@@ -46,4 +46,7 @@ public class UserDto {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+    public void setBranch(String selectedBranch) {
+    }
 }

@@ -1,6 +1,8 @@
 package org.example.dto;
 
 import jakarta.persistence.Id;
+import org.example.entity.Books;
+import org.example.entity.Branches;
 
 public class BooksDto {
     @Id
@@ -8,16 +10,43 @@ public class BooksDto {
     private String author;
     private String genre;
     private boolean availability = true;
+    private String branch;
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
 
     public BooksDto() {
     }
 
+    /*public BooksDto(String title, String author, String genre, boolean availability,String selectedBranch) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+        this.selectedBranch = selectedBranch;
+    }*/
     public BooksDto(String title, String author, String genre, boolean availability) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.availability = availability;
     }
+
+    // Constructor with selectedBranch parameter
+    public BooksDto(String title, String author, String genre, boolean availability, String branch) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+        this.branch = branch;
+    }
+
 
     public String getTitle() {
         return title;
@@ -51,6 +80,7 @@ public class BooksDto {
         this.availability = availability;
     }
 
+
     @Override
     public String toString() {
         return "BooksDto{" +
@@ -58,6 +88,9 @@ public class BooksDto {
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
                 ", availability=" + availability +
+                ", branch='" + branch + '\'' +
                 '}';
     }
+
+
 }

@@ -2,8 +2,7 @@ package org.example.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import org.example.bo.UserBO;
 import org.example.bo.UserBOimpl;
@@ -12,6 +11,12 @@ import org.example.entity.Users;
 
 public class UserMngController {
 
+    public ComboBox comboBranch;
+    public TableView tblUser;
+    public TableColumn colName;
+    public TableColumn colPassword;
+    public TableColumn colBranch;
+    public TableColumn colEmail;
     @FXML
     private AnchorPane rootNode;
 

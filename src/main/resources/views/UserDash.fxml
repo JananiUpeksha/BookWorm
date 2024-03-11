@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootNode" prefHeight="770.0" prefWidth="1125.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.AdminDashController">
-    <children>
-          <Button layoutX="297.0" layoutY="446.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="249.0" text="Button" />
-          <Button layoutX="93.0" layoutY="72.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="249.0" text="Search" />
-          <Button layoutX="456.0" layoutY="72.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="249.0" text="Transaction History" />
-          <Button layoutX="755.0" layoutY="72.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="249.0" text="Borrow Books" />
-          <Button layoutX="755.0" layoutY="464.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="LogOut" />
-    </children>
+<AnchorPane fx:id="rootNode" prefHeight="770.0" prefWidth="1125.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.UserDashController">
+   <children>
+      <ImageView fitHeight="777.0" fitWidth="1131.0" layoutX="-3.0" layoutY="-1.0">
+         <image>
+            <Image url="@../../../../../../Downloads/product-presentation-wooden-table-with-background-empty-bookshelf-library_172251-444.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblUserBooks" layoutX="372.0" layoutY="149.0" prefHeight="564.0" prefWidth="735.0">
+        <columns>
+          <TableColumn fx:id="colTitle" prefWidth="226.0" text="C1" />
+            <TableColumn fx:id="colAuthor" prefWidth="263.0" text="C1" />
+            <TableColumn fx:id="colGenre" prefWidth="214.0" text="C1" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="169.0" fitWidth="367.0" layoutX="49.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/Orange%20and%20Black%20Professional%20Visiting%20Card.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="169.0" fitWidth="367.0" layoutX="49.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/Orange%20and%20Black%20Professional%20Visiting%20Card(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="169.0" fitWidth="367.0" layoutX="49.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/Orange%20and%20Black%20Professional%20Visiting%20Card(1).png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

@@ -13,6 +13,7 @@ public class Users extends UserDto {
     private String email;
     private String name;
     private String password;
+    private String branchs;
 
     @ManyToMany(mappedBy = "user")
     private List<Books> books;

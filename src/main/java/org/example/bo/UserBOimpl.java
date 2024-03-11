@@ -41,7 +41,9 @@ public class UserBOimpl implements UserBO{
             return userDAO.update(new Users(dto.getEmail(), dto.getName(), dto.getPassword()));
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println(e.getMessage());
             return false;
+
         }
     }
 

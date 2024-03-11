@@ -2,14 +2,13 @@ package org.example.dao;
 
 import config.FactoryConfiguration;
 import org.example.entity.Books;
-import org.example.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class BooksDAOimpl implements BooksDAO{
+public class BooksDAOimpl implements BooksDAO {
     @Override
     public boolean save(Books books) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
@@ -73,5 +72,4 @@ public class BooksDAOimpl implements BooksDAO{
             return null;
         }
     }
-
 }

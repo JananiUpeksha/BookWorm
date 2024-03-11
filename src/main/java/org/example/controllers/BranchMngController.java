@@ -1,17 +1,31 @@
 package org.example.controllers;
 
+import TM.BranchTm;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import org.example.bo.BranchesBO;
 import org.example.bo.BranchesBOimpl;
+import org.example.dto.BranchesDto;
 import org.example.entity.Books;
 import org.example.entity.Branches;
 
+import java.sql.SQLException;
+import java.util.List;
+
 public class BranchMngController {
+    public TableView tblBranch;
+    public TableColumn colBranchName;
+    public TableColumn colLocation;
+    public TableColumn colAdminName;
     @FXML
     private AnchorPane rootNode;
 
@@ -38,7 +52,8 @@ public class BranchMngController {
         String branchName = txtBranchName.getText();
         if (branchesBO.delete(branchName)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
-            //clearFields();
+            loadAllBranches();
+            tblBranch.refresh();
         }
     }
 
@@ -58,7 +73,8 @@ public class BranchMngController {
 
         if (isSaved) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-            // Clear fields or perform any other necessary action
+            loadAllBranches();
+            tblBranch.refresh();
         }
     }
 
@@ -87,7 +103,8 @@ public class BranchMngController {
 
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Branch updated successfully").show();
-                // Optionally, clear fields or perform any other necessary action
+                loadAllBranches();
+                tblBranch.refresh();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Failed to update branch").show();
             }
@@ -103,6 +120,39 @@ public class BranchMngController {
                 fetchAndDisplayBranchDetails();
             }
         });
+        setCellvalueFactory();
+        tableListener();
+        loadAllBranches();
+
+    }
+
+    private void loadAllBranches() {
+        ObservableList<BranchTm> observableList = FXCollections.observableArrayList();
+        List<Branches> branchesList = branchesBO.getAll(); // Assuming you have a branchesBO object
+        for (Branches branch : branchesList) {
+            // Create BranchTm object using branch details and add it to the observable list
+            observableList.add(new BranchTm(branch.getBranchName(), branch.getLocation(), branch.getBranchAdmin()));
+        }
+        // Clear existing items and set the new observable list
+        tblBranch.getItems().clear();
+        tblBranch.setItems(observableList);
+    }
+
+   private void tableListener() {
+       tblBranch.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+           if (newValue != null) {
+               BranchTm selectedBranch = (BranchTm) newValue;
+               txtBranchName.setText(selectedBranch.getBranchName());
+               txtLocation.setText(selectedBranch.getLocation());
+               txtAdmninName.setText(selectedBranch.getBranchAdmin());
+           }
+       });
+    }
+
+    private void setCellvalueFactory() {
+        colBranchName.setCellValueFactory(new PropertyValueFactory<>("branchName"));
+        colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
+        colAdminName.setCellValueFactory(new PropertyValueFactory<>("branchAdmin"));
     }
 
     private void fetchAndDisplayBranchDetails() {

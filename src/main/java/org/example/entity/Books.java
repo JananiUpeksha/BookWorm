@@ -16,6 +16,7 @@ public class Books {
     private String genre;
     private boolean availability = true;
 
+
     @ManyToMany
     private List<Users> user;
 
@@ -33,6 +34,7 @@ public class Books {
         this.availability = availability;
         this.user = user;
         this.branch = branch;
+
     }
     public Books(String title, String author, String genre, boolean availability) {
         this.title = title;
@@ -40,6 +42,15 @@ public class Books {
         this.genre = genre;
         this.availability = availability;
     }
+
+    public Books(String title, String author, String genre, boolean availability, Branches selectedBranch) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+        this.branch = selectedBranch;
+    }
+
 
     @Override
     public String toString() {

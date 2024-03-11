@@ -1,17 +1,16 @@
-package org.example.dto;
+package TM;
 
-public class BranchesDto {
+public class BranchTm {
     private String branchName;
 
     private String location;
 
     private String branchAdmin;
 
-
-    public BranchesDto() {
+    public BranchTm() {
     }
 
-    public BranchesDto(String branchName, String location, String branchAdmin) {
+    public BranchTm(String branchName, String location, String branchAdmin) {
         this.branchName = branchName;
         this.location = location;
         this.branchAdmin = branchAdmin;
@@ -43,7 +42,7 @@ public class BranchesDto {
 
     @Override
     public String toString() {
-        return "BranchesDto{" +
+        return "BranchTm{" +
                 "branchName='" + branchName + '\'' +
                 ", location='" + location + '\'' +
                 ", branchAdmin='" + branchAdmin + '\'' +

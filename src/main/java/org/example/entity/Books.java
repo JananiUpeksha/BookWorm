@@ -15,6 +15,11 @@ public class Books {
     private String genre;
     private boolean availability = true;
     @ManyToMany
+    @JoinTable(
+            name = "books_users", // Specify the name of the join table
+            joinColumns = @JoinColumn(name = "book_title") // Column name in the join table for Books
+           // inverseJoinColumns = @JoinColumn(name = "user_id") // Column name in the join table for Users
+    )
     private List<Users> users;
 
     @ManyToOne

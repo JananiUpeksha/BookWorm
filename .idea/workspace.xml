@@ -8,10 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/FactoryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/FactoryConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +26,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="HTML File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -101,7 +103,9 @@
       <workItem from="1710072606275" duration="3337000" />
       <workItem from="1710142532110" duration="122000" />
       <workItem from="1710161692581" duration="16816000" />
-      <workItem from="1710206915098" duration="12688000" />
+      <workItem from="1710206915098" duration="13540000" />
+      <workItem from="1710233915753" duration="82000" />
+      <workItem from="1710234085926" duration="8841000" />
     </task>
     <servers />
   </component>

@@ -1062,8 +1062,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="289" parent="1" name="BookWorm">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-03-12.15:42:30</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-03-12.04:42:30</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-03-12.23:06:54</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-03-12.12:06:54</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="Kade">
@@ -1164,19 +1164,19 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="320" parent="289" name="Books_Users">
+    <table id="320" parent="289" name="Branches">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="321" parent="289" name="Branches">
+    <table id="321" parent="289" name="Users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="322" parent="289" name="Users">
+    <table id="322" parent="289" name="Users_SEQ">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="323" parent="289" name="Users_SEQ">
+    <table id="323" parent="289" name="books_users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
@@ -1221,100 +1221,140 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="333" parent="320" name="books_title">
+    <column id="333" parent="320" name="branchName">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="334" parent="320" name="user_id">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="335" parent="320" name="FKlvnefw5nshitkkvo3r7vqb5q7">
-      <ColNames>books_title</ColNames>
-      <RefColNames>title</RefColNames>
-      <RefTableName>Books</RefTableName>
-    </foreign-key>
-    <foreign-key id="336" parent="320" name="FKnllp8ymc8lan0u7ksm3ohopuh">
-      <ColNames>user_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>Users</RefTableName>
-    </foreign-key>
-    <index id="337" parent="320" name="FKlvnefw5nshitkkvo3r7vqb5q7">
-      <ColNames>books_title</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="338" parent="320" name="FKnllp8ymc8lan0u7ksm3ohopuh">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <column id="339" parent="321" name="branchName">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="340" parent="321" name="branchAdmin">
+    <column id="334" parent="320" name="branchAdmin">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="341" parent="321" name="location">
+    <column id="335" parent="320" name="location">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="342" parent="321" name="PRIMARY">
+    <index id="336" parent="320" name="PRIMARY">
       <ColNames>branchName</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="343" parent="321" name="PRIMARY">
+    <key id="337" parent="320" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="344" parent="322" name="id">
+    <column id="338" parent="321" name="id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="345" parent="322" name="email">
+    <column id="339" parent="321" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="346" parent="322" name="name">
+    <column id="340" parent="321" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="347" parent="322" name="password">
+    <column id="341" parent="321" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="348" parent="322" name="branch_branchName">
+    <column id="342" parent="321" name="branch_branchName">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <foreign-key id="349" parent="322" name="FK1lauoi9etw6ij3bp6r2u0ykre">
+    <foreign-key id="343" parent="321" name="FK1lauoi9etw6ij3bp6r2u0ykre">
       <ColNames>branch_branchName</ColNames>
       <RefColNames>branchName</RefColNames>
       <RefTableName>Branches</RefTableName>
     </foreign-key>
-    <index id="350" parent="322" name="PRIMARY">
+    <index id="344" parent="321" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="351" parent="322" name="FK1lauoi9etw6ij3bp6r2u0ykre">
+    <index id="345" parent="321" name="FK1lauoi9etw6ij3bp6r2u0ykre">
       <ColNames>branch_branchName</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="322" name="PRIMARY">
+    <key id="346" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="353" parent="323" name="next_val">
+    <column id="347" parent="322" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
+    <column id="348" parent="323" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="349" parent="323" name="is_return">
+      <DasType>bit(1)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="350" parent="323" name="issue_date">
+      <DasType>date|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="351" parent="323" name="return_date">
+      <DasType>date|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="352" parent="323" name="book_title">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="353" parent="323" name="user_name">
+      <DasType>int|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="354" parent="323" name="users_id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="355" parent="323" name="FK23ttvaxo3ckk7nwg6ug34ld8j">
+      <ColNames>book_title</ColNames>
+      <RefColNames>title</RefColNames>
+      <RefTableName>Books</RefTableName>
+    </foreign-key>
+    <foreign-key id="356" parent="323" name="FK1fkhhcjn3db9qvatpb2h0cgny">
+      <ColNames>user_name</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <foreign-key id="357" parent="323" name="FKeheserqpejh6ifl2ecxfbbtyv">
+      <ColNames>users_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <index id="358" parent="323" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="359" parent="323" name="FK23ttvaxo3ckk7nwg6ug34ld8j">
+      <ColNames>book_title</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="360" parent="323" name="FK1fkhhcjn3db9qvatpb2h0cgny">
+      <ColNames>user_name</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="361" parent="323" name="FKeheserqpejh6ifl2ecxfbbtyv">
+      <ColNames>users_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="362" parent="323" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

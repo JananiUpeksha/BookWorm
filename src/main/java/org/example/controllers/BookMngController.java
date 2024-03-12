@@ -207,8 +207,20 @@ public class BookMngController {
         colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         colAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        // Customize the colAvailable cell value factory to display "Available" for true and "Unavailable" for false
         colAvailable.setCellValueFactory(new PropertyValueFactory<>("availability"));
-        colBranch.setCellValueFactory(new PropertyValueFactory<>("branch") );
+        colAvailable.setCellFactory(column -> new TableCell<BooksTm, Boolean>() {
+            @Override
+            protected void updateItem(Boolean item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null || empty) {
+                    setText(null);
+                } else {
+                    setText(item ? "Available" : "Unavailable");
+                }
+            }
+        });
+        colBranch.setCellValueFactory(new PropertyValueFactory<>("branch"));
     }
 
     private void loadAllBooks() {

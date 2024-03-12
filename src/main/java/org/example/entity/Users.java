@@ -14,8 +14,14 @@ public class Users  {
     private String name;
     private String password;
 
-    @ManyToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "users")
+    /*@JoinTable(
+            name = "Books_Users",
+            joinColumns =  @JoinColumn(name = "name"),
+            inverseJoinColumns = @JoinColumn(name = "title")
+    )*/
     private List<Books> books;
+
     @ManyToOne
     private Branches branch;
 

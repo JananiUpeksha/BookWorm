@@ -1,5 +1,6 @@
 package config;
 import org.example.entity.Books;
+import org.example.entity.Books_Users;
 import org.example.entity.Branches;
 import org.example.entity.Users;
 import org.hibernate.Session;
@@ -21,7 +22,7 @@ public class FactoryConfiguration {
         } catch (IOException e) {
             System.out.println(e.getMessage());;
         }
-        Configuration configuration = new Configuration().addProperties(properties).addAnnotatedClass(Users.class).addAnnotatedClass(Books.class).addAnnotatedClass(Branches.class);
+        Configuration configuration = new Configuration().addProperties(properties).addAnnotatedClass(Users.class).addAnnotatedClass(Books.class).addAnnotatedClass(Branches.class).addAnnotatedClass(Books_Users.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

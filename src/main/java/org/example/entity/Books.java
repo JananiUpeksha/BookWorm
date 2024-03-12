@@ -1,9 +1,6 @@
 package org.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -12,11 +9,13 @@ public class Books {
 
     @Id
     private String title;
+    @Column
     private String author;
+    @Column
     private String genre;
     private boolean availability = true;
     @ManyToMany
-    private List<Users> user;
+    private List<Users> users;
 
     @ManyToOne
     private Branches branch;
@@ -25,12 +24,12 @@ public class Books {
     public Books() {
     }
 
-    public Books(String title, String author, String genre, boolean availability, List<Users> user, Branches branch) {
+    public Books(String title, String author, String genre, boolean availability, List<Users> users, Branches branch) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.availability = availability;
-        this.user = user;
+        this.users = users;
         this.branch = branch;
 
     }
@@ -57,7 +56,7 @@ public class Books {
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
                 ", availability=" + availability +
-                ", user=" + user +
+                ", user=" + users +
                 ", branch=" + branch +
                 '}';
     }
@@ -95,11 +94,11 @@ public class Books {
     }
 
     public List<Users> getUser() {
-        return user;
+        return users;
     }
 
     public void setUser(List<Users> user) {
-        this.user = user;
+        this.users = user;
     }
 
     public Branches getBranch() {

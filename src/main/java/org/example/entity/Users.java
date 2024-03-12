@@ -6,14 +6,13 @@ import org.example.dto.UserDto;
 import java.util.List;
 
 @Entity
-public class Users extends UserDto {
+public class Users  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String email;
     private String name;
     private String password;
-    private String branchs;
 
     @ManyToMany(mappedBy = "user")
     private List<Books> books;
@@ -37,6 +36,13 @@ public class Users extends UserDto {
         this.name = name;
         this.password = password;
     }
+    public Users(String email, String name, String password, Branches branch) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.branch = branch;
+    }
+
 
     public int getId() {
         return id;

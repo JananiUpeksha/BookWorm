@@ -12,7 +12,6 @@ public class BooksTm {
     private String author;
     private String genre;
     private boolean availability = true;
-    @ManyToOne
     private String branch;
 
     public BooksTm() {

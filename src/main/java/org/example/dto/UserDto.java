@@ -3,7 +3,45 @@ package org.example.dto;
 public class UserDto {
     private String email;
     private String name;
+
     private String password;
+    private String branches;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
+
+    public UserDto(int id ,String email, String name, String password, String branches) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.branches = branches;
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", branches='" + branches + '\'' +
+                '}';
+    }
+
+    public UserDto(String email, String name, String password, String branches) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.branches = branches;
+    }
 
     public UserDto() {
     }
@@ -38,15 +76,12 @@ public class UserDto {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "UserDto{" +
-                "email='" + email + '\'' +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getBranch() {
+        return branches;
     }
 
-    public void setBranch(String selectedBranch) {
+    public void setBranch(String branch) {
+        this.branches = branch;
     }
+
 }

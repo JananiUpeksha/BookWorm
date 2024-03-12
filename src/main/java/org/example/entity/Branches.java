@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
@@ -15,11 +16,16 @@ public class Branches {
 
     private String branchAdmin;
 
-    @OneToMany(mappedBy = "branch")
+  @OneToMany(mappedBy = "branch")
     private List<Users> users;
 
     @OneToMany(mappedBy = "branch")
     private List<Books> books;
+    /*@OneToMany(mappedBy = "branch", fetch = FetchType.EAGER) // Fetch the books eagerly
+    private List<Books> books;
+    @OneToMany(mappedBy = "branch", fetch = FetchType.EAGER)
+    private List<Users> users;*/
+
 
     public Branches() {
     }
@@ -78,7 +84,7 @@ public class Branches {
         this.books = books;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Branches{" +
                 "branchName='" + branchName + '\'' +
@@ -87,5 +93,16 @@ public class Branches {
                 ", users=" + users +
                 ", books=" + books +
                 '}';
+    }*/
+    @Override
+    public String toString() {
+        return "Branches{" +
+                "branchName='" + branchName + '\'' +
+                ", location='" + location + '\'' +
+                ", branchAdmin='" + branchAdmin + '\'' +
+                ", users=" + (users != null ? users.size() : "not initialized") + // Check if users is null before accessing it
+                ", books=" + (books != null ? books.size() : "not initialized") + // Check if books is null before accessing it
+                '}';
     }
+
 }

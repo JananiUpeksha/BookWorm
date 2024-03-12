@@ -15,8 +15,6 @@ public class Books {
     private String author;
     private String genre;
     private boolean availability = true;
-
-
     @ManyToMany
     private List<Users> user;
 

@@ -2,6 +2,7 @@ package org.example.controllers;
 
 import TM.BooksTm;
 import TM.BranchTm;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -30,7 +31,7 @@ public class BookMngController {
     public TextField txtAvailable;
     public AnchorPane rootNode;
     public ComboBox <String> comboBranch;
-    public TableView tblBooks;
+    public TableView<BooksTm> tblBooks;
     public TableColumn colTitle;
     public TableColumn colAuthor;
     public TableColumn colGenre;
@@ -66,7 +67,7 @@ public class BookMngController {
 
                     if (isSaved) {
                         new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-                        // Clear fields or perform any other necessary action
+                        loadAllBooks();
                     } else {
                         new Alert(Alert.AlertType.ERROR, "Failed to save book").show();
                     }
@@ -113,6 +114,7 @@ public class BookMngController {
 
                         if (isUpdated) {
                             new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
+                            loadAllBooks();
                         }
                     }
                 }
@@ -126,6 +128,7 @@ public class BookMngController {
             String title = txtTitle.getText();
             if (booksBO.delete(title)) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
+                loadAllBooks();
                 //clearFields();
             }
         }
@@ -135,7 +138,7 @@ public class BookMngController {
             txtAuthor.setText("");
             txtGenre.setText("");
             txtAvailable.setText("");
-            comboBranch.setValue(null);
+            comboBranch.getSelectionModel().clearSelection();
         }
     public void initialize() throws ClassNotFoundException {
         setCellValueFactory();
@@ -160,7 +163,7 @@ public class BookMngController {
                 txtAvailable.setText(String.valueOf(selectedBook.isAvailability()));
                 String branchName = selectedBook.getBranch();
                 if (branchName != null) {
-                    comboBranch.setValue(branchName);
+                    comboBranch.setValue(String.valueOf(branchName));
                 }
             }
         });
@@ -205,20 +208,19 @@ public class BookMngController {
         colAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
         colAvailable.setCellValueFactory(new PropertyValueFactory<>("availability"));
-        colBranch.setCellValueFactory(new PropertyValueFactory<>("branch"));
+        colBranch.setCellValueFactory(new PropertyValueFactory<>("branch") );
     }
+
     private void loadAllBooks() {
-        List<Books> allBooks = booksBO.getAll(); // Assuming getAllBooks method in BooksBOimpl
+        List<Books> allBooks = booksBO.getAll();
 
         ObservableList<BooksTm> booksTms = FXCollections.observableArrayList();
         for (Books book : allBooks) {
-            // Convert each Books entity to a BooksTm object
             String branchName = book.getBranch() != null ? book.getBranch().getBranchName() : null;
             BooksTm booksTm = new BooksTm(book.getTitle(), book.getAuthor(), book.getGenre(), book.isAvailability(), branchName);
             booksTms.add(booksTm);
         }
 
-        // Set the items of the TableView
         tblBooks.setItems(booksTms);
     }
 

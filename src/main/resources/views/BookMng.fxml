@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="820.0" fitWidth="1155.0">
          <image>
-            <Image url="@../../../../../../Downloads/content.jpg" />
+            <Image url="@../assets/bg.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="txtTitle" layoutX="81.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
@@ -37,12 +37,12 @@
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="136.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Save">
+      <Button layoutX="125.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: #8E7AB5;" text="Save">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="379.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Update">
+      <Button layoutX="379.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
@@ -52,7 +52,7 @@
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="870.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Delete">
+      <Button layoutX="864.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FFF78A;" text="Delete">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>

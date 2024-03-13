@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -14,7 +15,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.BooksBO;
 import org.example.bo.BooksBOimpl;
+import org.example.bo.BranchesBO;
+import org.example.bo.BranchesBOimpl;
 import org.example.entity.Books;
+import org.example.entity.Branches;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,16 +29,22 @@ public class UserDashController {
     public TableColumn colTitle;
     public TableColumn colAuthor;
     public TableColumn colGenre;
+    public Label lbl1;
+    public Label lbl2;
+    public Label lbl3;
+    public Label lbl4;
     private BooksBO booksBO = new BooksBOimpl();
+    private BranchesBO branchesBO = new BranchesBOimpl();
 
     public void initialize() {
         setCellvalueFactory();
         loadAllBooks();
         tblUserBooks.getSelectionModel().clearSelection();
         rootNode.requestFocus();
+        loadLastFourBranches();
     }
 
-    private void loadAllBooks() {
+   private void loadAllBooks() {
         ObservableList<UserDashTm> observableList = FXCollections.observableArrayList();
         List<Books> booksList = booksBO.getAll();
         for (Books book : booksList) {
@@ -49,14 +59,49 @@ public class UserDashController {
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
     }
 
+    private void loadLastFourBranches() {
+        List<Branches> allBranches = branchesBO.getAll();
+
+        if (allBranches.size() >= 1) {
+            lbl1.setText(allBranches.get(allBranches.size() - 1).getBranchName());
+        }
+
+        if (allBranches.size() >= 2) {
+            lbl2.setText(allBranches.get(allBranches.size() - 2).getBranchName());
+        }
+
+        if (allBranches.size() >= 3) {
+            lbl3.setText(allBranches.get(allBranches.size() - 3).getBranchName());
+        }
+
+        if (allBranches.size() >= 4) {
+            lbl4.setText(allBranches.get(allBranches.size() - 4).getBranchName());
+        }
+    }
 
     public void btnBorrowPageOnACtion(ActionEvent actionEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/Borrow.fxml"));
         Scene scene = new Scene(rootNode);
         Stage Stage = (Stage)this.rootNode.getScene().getWindow();
         Stage.setScene(scene);
-        Stage.setTitle("User Login Form");
+        Stage.setTitle("Borrow Book Form");
         Stage.centerOnScreen();
         Stage.show();
+    }
+
+    public void returnOnACtion(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/Return.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Book Return Form");
+        Stage.centerOnScreen();
+        Stage.show();
+    }
+
+    public void userHistoryOnACtion(ActionEvent actionEvent) {
+    }
+
+    public void userSettingOnACtion(ActionEvent actionEvent) {
     }
 }

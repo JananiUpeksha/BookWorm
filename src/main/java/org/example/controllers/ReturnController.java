@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 public class ReturnController {
+    public TextField txtName;
     @FXML
     private DatePicker borrowDate;
 

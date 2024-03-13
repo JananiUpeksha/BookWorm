@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminDashController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ReturnController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/janani/Desktop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/janani/IdeaProjects/BookWorm/src/main/resources/assets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -115,7 +117,9 @@
       <workItem from="1710234085926" duration="9087000" />
       <workItem from="1710257357036" duration="2879000" />
       <workItem from="1710261080136" duration="4062000" />
-      <workItem from="1710297511245" duration="13347000" />
+      <workItem from="1710297511245" duration="15939000" />
+      <workItem from="1710334662567" duration="6656000" />
+      <workItem from="1710351694074" duration="3589000" />
     </task>
     <servers />
   </component>

@@ -99,17 +99,6 @@ public class UserMngController {
 
     @FXML
     public void btnSearchOnAction(ActionEvent actionEvent) {
-       /* int id = Integer.parseInt(txtId.getText());
-        Users userDto = userBO.getUser(id);
-        if (userDto != null) {
-            txtEmail.setText(userDto.getEmail());
-            txtName.setText(userDto.getName());
-            txtPassword.setText(userDto.getPassword());
-            String branchName = String.valueOf(userDto.getBranch());
-            comboBranch.setValue(branchName);
-        } else {
-            new Alert(Alert.AlertType.ERROR, "User not found").show();
-        }*/
         int id = Integer.parseInt(txtId.getText());
         Users userDto = userBO.getUser(id);
 
@@ -131,33 +120,6 @@ public class UserMngController {
             new Alert(Alert.AlertType.ERROR, "User not found").show();
         }
     }
-    /*public void btnUpdateOnAction(ActionEvent event) {
-        String email = txtEmail.getText();
-        String name = txtName.getText();
-        String password = txtPassword.getText();
-        int userId = Integer.parseInt(txtId.getText());
-        String selectedBranchName = (String) comboBranch.getValue();
-
-        // Retrieve the existing user by ID
-        Users existingUser = userBO.getUser(userId);
-
-        if (existingUser != null) {
-            // Create a UserDto object with the updated information
-            UserDto userDto = new UserDto(email, name, password, selectedBranchName);
-
-            // Call the update method of userBO to save the changes
-            boolean isUpdated = userBO.update(userDto);
-
-            if (isUpdated) {
-                new Alert(Alert.AlertType.CONFIRMATION, "User updated successfully").show();
-                // Optionally, clear fields or perform any other necessary action
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
-            }
-        } else {
-            new Alert(Alert.AlertType.ERROR, "User not found").show();
-        }
-    }*/
     public void btnUpdateOnAction(ActionEvent event) {
         String email = txtEmail.getText();
         String name = txtName.getText();

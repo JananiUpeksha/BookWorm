@@ -10,4 +10,5 @@ public interface UserDAO extends SuperDAO{
     public boolean update(Users user);
     public Users getUser(int id);
     public List<Users> getAll();
+    Users getUserByName(String name);
 }

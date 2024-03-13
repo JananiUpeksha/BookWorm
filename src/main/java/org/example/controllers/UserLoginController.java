@@ -13,6 +13,7 @@ import org.example.bo.UserBO;
 import org.example.bo.UserBOimpl;
 import org.example.entity.Users;
 
+import javax.imageio.IIOParam;
 import java.io.IOException;
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class UserLoginController {
     @FXML
     private TextField txtPassword;
     private UserBO userBO = new UserBOimpl();
+    private IIOParam loader;
 
     @FXML
     void createAccountOnAction(ActionEvent event) throws IOException {
@@ -60,13 +62,19 @@ public class UserLoginController {
         }
 
         if (userFound) {
-            Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserDash.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/UserDash.fxml"));
+            Parent rootNode = loader.load();
             Scene scene = new Scene(rootNode);
-            Stage Stage = (Stage)this.rootNode.getScene().getWindow();
-            Stage.setScene(scene);
-            Stage.setTitle("User Login Form");
-            Stage.centerOnScreen();
-            Stage.show();
+            Stage stage = (Stage)this.rootNode.getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("User Login Form");
+            stage.centerOnScreen();
+            stage.show();
+
+            /*BorrowController borrowController = loader.getController();
+
+            // Pass the username to the BorrowController
+            borrowController.setUsername(username);*/
         } else {
             // Username and/or password are incorrect
             new Alert(Alert.AlertType.ERROR, "Incorrect username or password.").show();

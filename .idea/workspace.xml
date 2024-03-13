@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -105,7 +112,10 @@
       <workItem from="1710161692581" duration="16816000" />
       <workItem from="1710206915098" duration="13540000" />
       <workItem from="1710233915753" duration="82000" />
-      <workItem from="1710234085926" duration="8841000" />
+      <workItem from="1710234085926" duration="9087000" />
+      <workItem from="1710257357036" duration="2879000" />
+      <workItem from="1710261080136" duration="4062000" />
+      <workItem from="1710297511245" duration="13347000" />
     </task>
     <servers />
   </component>

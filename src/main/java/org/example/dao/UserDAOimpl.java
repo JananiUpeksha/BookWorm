@@ -121,4 +121,15 @@ public class UserDAOimpl implements UserDAO {
             return null;
         }
     }
+    @Override
+    public Users getUserByName(String name) {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            Query<Users> query = session.createQuery("FROM Users WHERE name = :name", Users.class);
+            query.setParameter("name", name);
+            return query.uniqueResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

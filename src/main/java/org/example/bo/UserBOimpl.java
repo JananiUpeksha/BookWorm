@@ -133,4 +133,15 @@ public class UserBOimpl implements UserBO{
             return null;
         }
     }
+
+    @Override
+    public Users getUserByName(String name) {
+        try {
+            // Call the DAO method to retrieve the user by name
+            return userDAO.getUserByName(name);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

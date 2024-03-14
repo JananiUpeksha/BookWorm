@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminDashController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/ReturnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +102,7 @@
       <workItem from="1710261080136" duration="4062000" />
       <workItem from="1710297511245" duration="15939000" />
       <workItem from="1710334662567" duration="6656000" />
-      <workItem from="1710351694074" duration="3589000" />
+      <workItem from="1710351694074" duration="4666000" />
     </task>
     <servers />
   </component>

@@ -66,35 +66,36 @@ public class UserMngController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        String email = txtEmail.getText();
-        String name = txtName.getText();
-        String password = txtPassword.getText();
-        String selectedBranchName = (String) comboBranch.getValue();
+        if (validateUser()){String email = txtEmail.getText();
+            String name = txtName.getText();
+            String password = txtPassword.getText();
+            String selectedBranchName = (String) comboBranch.getValue();
 
-        if (email.isEmpty() || name.isEmpty() || password.isEmpty() || selectedBranchName == null) {
-            new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
-            return;
-        }
+            if (email.isEmpty() || name.isEmpty() || password.isEmpty() || selectedBranchName == null) {
+                new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
+                return;
+            }
 
-        // Retrieve the Branches object corresponding to the selected branch name
-        Branches selectedBranch = branchDAO.getBranches(selectedBranchName);
+            // Retrieve the Branches object corresponding to the selected branch name
+            Branches selectedBranch = branchDAO.getBranches(selectedBranchName);
 
-        // Check if the branch is found
-        if (selectedBranch == null) {
-            new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
-            return;
-        }
+            // Check if the branch is found
+            if (selectedBranch == null) {
+                new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
+                return;
+            }
 
-        // Create a Users entity with the retrieved branch
-        Users user = new Users(email, name, password, selectedBranch);
+            // Create a Users entity with the retrieved branch
+            Users user = new Users(email, name, password, selectedBranch);
 
-        // Call the save method of userBO to save the user
-        boolean isSaved = userBO.save(user);
+            // Call the save method of userBO to save the user
+            boolean isSaved = userBO.save(user);
 
-        if (isSaved) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-            // Clear fields or perform any other necessary action
-        }
+            if (isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
+                // Clear fields or perform any other necessary action
+            }
+            tblUser.refresh();}
     }
 
     @FXML
@@ -139,6 +140,7 @@ public class UserMngController {
         } else {
             new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
         }
+        tblUser.refresh();
     }
 
     public void initialize(){
@@ -191,4 +193,33 @@ public class UserMngController {
         }
         comboBranch.setItems(obList);
     }
+    private boolean validateUser() {
+        String email = txtEmail.getText();
+        String name = txtName.getText();
+        String password = txtPassword.getText();
+
+        String emailRegex = "^\\S+@\\S+\\.com$";
+        String nameRegex = "^.{4,}$";
+        String passwordRegex = "^.{5,}$";
+
+        boolean isEmailValid = email.matches(emailRegex);
+        boolean isNameValid = name.matches(nameRegex);
+        boolean isPasswordValid = password.matches(passwordRegex);
+
+        if (!isEmailValid) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Email").show();
+            return false;
+        }
+        if (!isNameValid) {
+            new Alert(Alert.AlertType.ERROR, "Name must be at least 4 characters long").show();
+            return false;
+        }
+        if (!isPasswordValid) {
+            new Alert(Alert.AlertType.ERROR, "Password must be at least 5 characters long").show();
+            return false;
+        }
+
+        return true;
+    }
+
 }

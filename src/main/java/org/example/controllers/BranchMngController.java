@@ -59,22 +59,24 @@ public class BranchMngController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        String branchName = txtBranchName.getText();
-        String location = txtLocation.getText();
-        String admin = txtAdmninName.getText();
+        if (validateBranch()){
+            String branchName = txtBranchName.getText();
+            String location = txtLocation.getText();
+            String admin = txtAdmninName.getText();
 
-        if (branchName.isEmpty() || location.isEmpty() || admin.isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
-            return;
-        }
-        Branches branches = new Branches(branchName,location,admin);
-        // Call save method of booksBO
-        boolean isSaved = branchesBO.save(branches);
+            if (branchName.isEmpty() || location.isEmpty() || admin.isEmpty()) {
+                new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
+                return;
+            }
+            Branches branches = new Branches(branchName,location,admin);
+            // Call save method of booksBO
+            boolean isSaved = branchesBO.save(branches);
 
-        if (isSaved) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-            loadAllBranches();
-            tblBranch.refresh();
+            if (isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
+                loadAllBranches();
+                tblBranch.refresh();
+            }
         }
     }
 
@@ -167,4 +169,33 @@ public class BranchMngController {
             new Alert(Alert.AlertType.ERROR, "Book not found").show();
         }
     }
+    private boolean validateBranch() {
+        String branchName = txtBranchName.getText().trim();
+        String location = txtLocation.getText().trim();
+        String adminName = txtAdmninName.getText().trim();
+
+        String branchNameRegex = "^[A-Za-z0-9\\s'-]+$";
+        String locationRegex = "^[A-Za-z0-9\\s',.-]+$";
+        String adminNameRegex = "^[A-Za-z\\s]+$";
+
+        boolean isBranchNameValid = branchName.matches(branchNameRegex);
+        boolean isLocationValid = location.matches(locationRegex);
+        boolean isAdminNameValid = adminName.matches(adminNameRegex);
+
+        if (!isBranchNameValid) {
+            new Alert(Alert.AlertType.ERROR, "Invalid branch name").show();
+            return false;
+        }
+        if (!isLocationValid) {
+            new Alert(Alert.AlertType.ERROR, "Invalid location").show();
+            return false;
+        }
+        if (!isAdminNameValid) {
+            new Alert(Alert.AlertType.ERROR, "Invalid admin name").show();
+            return false;
+        }
+
+        return true;
+    }
+
 }

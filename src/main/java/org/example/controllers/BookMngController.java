@@ -41,41 +41,43 @@ public class BookMngController {
     private BranchesBO branchesBO = new BranchesBOimpl();
     private BranchDAO branchDAO = new BranchDAOimpl();
         public void btnSaveOnAction(ActionEvent actionEvent) {
-            String title = txtTitle.getText();
-            String author = txtAuthor.getText();
-            String genre = txtGenre.getText();
-            String available = txtAvailable.getText();
-            boolean isAvailable;
-            String selectedBranch = (String) comboBranch.getValue();
+            if(validateBook()){
+                String title = txtTitle.getText();
+                String author = txtAuthor.getText();
+                String genre = txtGenre.getText();
+                String available = txtAvailable.getText();
+                boolean isAvailable;
+                String selectedBranch = (String) comboBranch.getValue();
 
 
-            if (!available.isEmpty()) {
-                isAvailable = Boolean.parseBoolean(available);
-            } else {
-                isAvailable = true; // Default to true if the field is empty
-            }
+                if (!available.isEmpty()) {
+                    isAvailable = Boolean.parseBoolean(available);
+                } else {
+                    isAvailable = true; // Default to true if the field is empty
+                }
 
 
-            if (selectedBranch != null) {
-                Branches branch = branchesBO.getBranches(comboBranch.getValue());
+                if (selectedBranch != null) {
+                    Branches branch = branchesBO.getBranches(comboBranch.getValue());
 
-                if (branch != null) {
-                    Books books = new Books(title, author, genre, isAvailable);
-                    books.setBranch(branch);
+                    if (branch != null) {
+                        Books books = new Books(title, author, genre, isAvailable);
+                        books.setBranch(branch);
 
-                    boolean isSaved = booksBO.save(books);
+                        boolean isSaved = booksBO.save(books);
 
-                    if (isSaved) {
-                        new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-                        loadAllBooks();
+                        if (isSaved) {
+                            new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
+                            loadAllBooks();
+                        } else {
+                            new Alert(Alert.AlertType.ERROR, "Failed to save book").show();
+                        }
                     } else {
-                        new Alert(Alert.AlertType.ERROR, "Failed to save book").show();
+                        new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
                     }
                 } else {
-                    new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
+                    new Alert(Alert.AlertType.ERROR, "Please select a branch").show();
                 }
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Please select a branch").show();
             }
         }
     public void btnUpdateOnAction(ActionEvent actionEvent) {
@@ -234,6 +236,31 @@ public class BookMngController {
         }
 
         tblBooks.setItems(booksTms);
+    }
+    private boolean validateBook() {
+        String title = txtTitle.getText().trim();
+        String author = txtAuthor.getText().trim();
+        String genre = txtGenre.getText().trim();
+        String available = txtAvailable.getText().trim();
+
+        if (title.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Title cannot be empty").show();
+            return false;
+        }
+        if (!author.matches("^[A-Za-z.\\s]+$")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Author").show();
+            return false;
+        }
+        if (!genre.matches("^[A-Za-z-\\s]+$")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Genre").show();
+            return false;
+        }
+        if (!available.matches("^(true|false)$")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Availability").show();
+            return false;
+        }
+
+        return true;
     }
 
 

@@ -1,5 +1,9 @@
 package org.example.bo;
 
+import org.example.bo.custom.impl.BooksBOimpl;
+import org.example.bo.custom.impl.BranchesBOimpl;
+import org.example.bo.custom.impl.UserBOimpl;
+
 public class BOFactory {
     private static BOFactory boFactory;
 

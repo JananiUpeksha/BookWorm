@@ -1,8 +1,9 @@
-package org.example.bo;
+package org.example.bo.custom.impl;
 
-import org.example.dao.BooksDAO;
-import org.example.dao.BranchDAO;
-import org.example.dao.BranchDAOimpl;
+import org.example.bo.custom.BooksBO;
+import org.example.dao.custom.BooksDAO;
+import org.example.dao.custom.BranchDAO;
+import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.dao.DAOFactory;
 import org.example.entity.Books;
 

@@ -1,10 +1,11 @@
-package org.example.bo;
+package org.example.bo.custom;
 
+import org.example.bo.SuperBO;
 import org.example.entity.Branches;
 
 import java.util.List;
 
-public interface BranchesBO extends SuperBO{
+public interface BranchesBO extends SuperBO {
     public boolean save(Branches dto);
     public boolean delete(String branchName);
     public boolean update(Branches dto);

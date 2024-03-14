@@ -1,16 +1,17 @@
-package org.example.bo;
+package org.example.bo.custom.impl;
 
-import org.example.dao.BranchDAO;
-import org.example.dao.BranchDAOimpl;
+import org.example.bo.custom.UserBO;
+import org.example.dao.custom.BranchDAO;
+import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.dao.DAOFactory;
-import org.example.dao.UserDAO;
+import org.example.dao.custom.UserDAO;
 import org.example.dto.UserDto;
 import org.example.entity.Branches;
 import org.example.entity.Users;
 
 import java.util.List;
 
-public class UserBOimpl implements UserBO{
+public class UserBOimpl implements UserBO {
     UserDAO userDAO = (UserDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.USER);
     private BranchDAO branchDAO = new BranchDAOimpl();
 

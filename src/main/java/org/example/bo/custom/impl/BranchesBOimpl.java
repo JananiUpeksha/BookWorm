@@ -1,14 +1,13 @@
-package org.example.bo;
+package org.example.bo.custom.impl;
 
-import org.example.dao.BooksDAO;
-import org.example.dao.BranchDAO;
+import org.example.bo.custom.BranchesBO;
+import org.example.dao.custom.BranchDAO;
 import org.example.dao.DAOFactory;
-import org.example.entity.Books;
 import org.example.entity.Branches;
 
 import java.util.List;
 
-public class BranchesBOimpl implements BranchesBO{
+public class BranchesBOimpl implements BranchesBO {
     BranchDAO branchDAO = (BranchDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.BRANCHES);
     @Override
     public boolean save(Branches dto) {

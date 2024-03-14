@@ -1,6 +1,5 @@
-package org.example.controllers;
+package org.example.controllers.Admin;
 
-import TM.BooksTm;
 import TM.UserTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,14 +8,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import org.example.bo.BranchesBO;
-import org.example.bo.BranchesBOimpl;
-import org.example.bo.UserBO;
-import org.example.bo.UserBOimpl;
-import org.example.dao.BranchDAO;
-import org.example.dao.BranchDAOimpl;
+import org.example.bo.custom.BranchesBO;
+import org.example.bo.custom.impl.BranchesBOimpl;
+import org.example.bo.custom.UserBO;
+import org.example.bo.custom.impl.UserBOimpl;
+import org.example.controllers.User.UserSettingsController;
+import org.example.dao.custom.BranchDAO;
+import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.dto.UserDto;
-import org.example.entity.Books;
 import org.example.entity.Branches;
 import org.example.entity.Users;
 
@@ -221,5 +220,6 @@ public class UserMngController {
 
         return true;
     }
+
 
 }

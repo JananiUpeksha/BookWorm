@@ -7,10 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import org.example.bo.UserBO;
-import org.example.bo.UserBOimpl;
-import org.example.dao.BranchDAO;
-import org.example.dao.BranchDAOimpl;
+import org.example.bo.custom.UserBO;
+import org.example.bo.custom.impl.UserBOimpl;
+import org.example.dao.custom.BranchDAO;
+import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.entity.Branches;
 import org.example.entity.Users;
 

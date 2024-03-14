@@ -1,6 +1,7 @@
-package org.example.dao;
+package org.example.dao.custom.impl;
 
 import config.FactoryConfiguration;
+import org.example.dao.custom.UserDAO;
 import org.example.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

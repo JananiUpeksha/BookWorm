@@ -1,5 +1,9 @@
 package org.example.dao;
 
+import org.example.dao.custom.impl.BooksDAOimpl;
+import org.example.dao.custom.impl.BranchDAOimpl;
+import org.example.dao.custom.impl.UserDAOimpl;
+
 public class DAOFactory {
     private static DAOFactory daoFactory;
     private DAOFactory(){}

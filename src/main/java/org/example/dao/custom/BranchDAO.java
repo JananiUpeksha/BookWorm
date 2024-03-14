@@ -1,11 +1,12 @@
-package org.example.dao;
+package org.example.dao.custom;
 
+import org.example.dao.SuperDAO;
 import org.example.entity.Books;
 import org.example.entity.Branches;
 
 import java.util.List;
 
-public interface BranchDAO extends SuperDAO{
+public interface BranchDAO extends SuperDAO {
     public boolean save(Branches branches);
     public boolean delete(String branchName);
     public boolean update(Branches branches);

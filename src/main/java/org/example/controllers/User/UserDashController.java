@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.User;
 
 import TM.UserDashTm;
 import javafx.collections.FXCollections;
@@ -13,10 +13,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.bo.BooksBO;
-import org.example.bo.BooksBOimpl;
-import org.example.bo.BranchesBO;
-import org.example.bo.BranchesBOimpl;
+import org.example.bo.custom.BooksBO;
+import org.example.bo.custom.impl.BooksBOimpl;
+import org.example.bo.custom.BranchesBO;
+import org.example.bo.custom.impl.BranchesBOimpl;
 import org.example.entity.Books;
 import org.example.entity.Branches;
 
@@ -99,9 +99,23 @@ public class UserDashController {
         Stage.show();
     }
 
-    public void userHistoryOnACtion(ActionEvent actionEvent) {
+    public void userHistoryOnACtion(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserHistory.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("User History Form");
+        Stage.centerOnScreen();
+        Stage.show();
     }
 
-    public void userSettingOnACtion(ActionEvent actionEvent) {
+    public void userSettingOnACtion(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserSettings.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("User Settings Form");
+        Stage.centerOnScreen();
+        Stage.show();
     }
 }

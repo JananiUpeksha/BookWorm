@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="820.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.BookMngController">
+<AnchorPane fx:id="rootNode" prefHeight="820.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Admin.BookMngController">
    <children>
       <ImageView fitHeight="820.0" fitWidth="1155.0">
          <image>

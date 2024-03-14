@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.User;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,15 +7,17 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import org.example.bo.*;
+import org.example.bo.custom.BooksBO;
+import org.example.bo.custom.Books_UsersBO;
+import org.example.bo.custom.UserBO;
+import org.example.bo.custom.impl.BooksBOimpl;
+import org.example.bo.custom.impl.Books_UsersBOimpl;
+import org.example.bo.custom.impl.UserBOimpl;
 import org.example.dto.Books_UserDto;
 import org.example.entity.Books;
-import org.example.entity.Books_Users;
 import org.example.entity.Users;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 
 public class BorrowController {
@@ -42,6 +44,7 @@ public class BorrowController {
     private static BooksBO booksBO = new BooksBOimpl();
     private Books_UsersBO books_usersBO = new Books_UsersBOimpl();
     private UserBO userBO = new UserBOimpl();
+    private Books_UserDto books_userDto = new Books_UserDto();
 
 
     @FXML
@@ -57,7 +60,49 @@ public class BorrowController {
             }
         }
     }
-    @FXML
+ /*   @FXML
+    void btnBorrowOnAction(ActionEvent event) {
+        String title = txtTitle.getText();
+        String author = txtAuthor.getText();
+        LocalDate issueDate = borrowDate.getValue();
+        LocalDate returnDateValue = returnDate.getValue();
+        String currentUserName = txtName.getText(); // Retrieving username from the text field
+        int userId;
+
+        String bookTitle = txtTitle.getText();
+        if (bookTitle != null && !bookTitle.isEmpty()) {
+            TransactionDto dto = new TransactionDto(userId, bookTitle, LocalDate.now(), lblDueDate.getText(), false);
+
+            BooksDto bookDto = null;
+            try {
+                // Save the transaction data
+                Books_UsersBO.save(userId, bookTitle, dto);
+
+                // Update the book availability
+                bookDto = booksBo.getBook(bookTitle);
+                if (bookDto != null) {
+                    bookDto.isAvailable("Unavailable");
+                    booksBo.updateBook(bookDto);
+                } else {
+                    // Handle the case where the book is not found
+                    new Alert(Alert.AlertType.ERROR, "Book not found").show();
+                    return;
+                }
+            } catch (SQLException e) {
+                // Print the stack trace of the SQL exception
+                e.printStackTrace();
+                throw new RuntimeException(e); // Rethrow the exception as a runtime exception
+            }
+
+            new Alert(Alert.AlertType.CONFIRMATION, "Your book borrow process is successful").show();
+        } else {
+            new Alert(Alert.AlertType.INFORMATION, "Please enter a book title").show();
+        }
+
+
+    }
+*/
+    /*@FXML
     void btnBorrowOnAction(ActionEvent event) {
         String title = txtTitle.getText();
         String author = txtAuthor.getText();
@@ -105,7 +150,7 @@ public class BorrowController {
         } else {
             new Alert(Alert.AlertType.INFORMATION, "Please fill in all the required fields").show();
         }
-    }
+    }*/
     private void calculateReturnDate() {
         borrowDate.setOnAction(event -> {
             LocalDate selectedDate = borrowDate.getValue();

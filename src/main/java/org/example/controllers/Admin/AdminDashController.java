@@ -1,7 +1,6 @@
-package org.example.controllers;
+package org.example.controllers.Admin;
 
 import TM.BranchTm;
-import TM.UserDashTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,10 +13,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.bo.BooksBO;
-import org.example.bo.BooksBOimpl;
-import org.example.bo.BranchesBO;
-import org.example.bo.BranchesBOimpl;
+import org.example.bo.custom.BooksBO;
+import org.example.bo.custom.impl.BooksBOimpl;
+import org.example.bo.custom.BranchesBO;
+import org.example.bo.custom.impl.BranchesBOimpl;
 import org.example.entity.Books;
 import org.example.entity.Branches;
 
@@ -69,11 +68,11 @@ public class AdminDashController {
     }
 
     public void btnUserHistoryOnACtion(ActionEvent actionEvent) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/Borrow.fxml"));
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/BookHistory.fxml"));
         Scene scene = new Scene(rootNode);
         Stage Stage = (Stage)this.rootNode.getScene().getWindow();
         Stage.setScene(scene);
-        Stage.setTitle("User History Form");
+        Stage.setTitle("Book History Form");
         Stage.centerOnScreen();
         Stage.show();
     }

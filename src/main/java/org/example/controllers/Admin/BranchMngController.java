@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.Admin;
 
 import TM.BranchTm;
 import javafx.collections.FXCollections;
@@ -12,13 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
-import org.example.bo.BranchesBO;
-import org.example.bo.BranchesBOimpl;
-import org.example.dto.BranchesDto;
-import org.example.entity.Books;
+import org.example.bo.custom.BranchesBO;
+import org.example.bo.custom.impl.BranchesBOimpl;
+import org.example.dto.Books_UserDto;
 import org.example.entity.Branches;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class BranchMngController {
@@ -39,6 +37,7 @@ public class BranchMngController {
     private TextField txtLocation;
 
     private BranchesBO branchesBO = new BranchesBOimpl();
+    private Books_UserDto books_userDto = new Books_UserDto();
 
     @FXML
     void btnClearOnAction(ActionEvent event) {

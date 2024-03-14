@@ -6,6 +6,44 @@
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/BOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BooksBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BooksBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/BooksBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/Books_UsersBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/Books_UsersBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/Books_UsersBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/Books_UsersBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BranchesBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BranchesBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BranchesBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/BranchesBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/UserBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/UserBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/UserBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/AdminDashController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/AdminLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/AdminLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BookMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BookMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/BranchMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BranchMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/ReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserDashController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserDashController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/UserMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/BooksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BooksDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/BooksDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Books_UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/Books_UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/Books_UsersDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/Books_UsersDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BranchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/BranchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BranchDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/BranchDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/UserDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Borrow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BranchMng.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Return.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +57,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -37,31 +75,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/janani/IdeaProjects/BookWorm/src/main/resources/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.45632184&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/janani/Downloads/bookworm-library",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.45632184",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets" />
@@ -103,6 +141,7 @@
       <workItem from="1710297511245" duration="15939000" />
       <workItem from="1710334662567" duration="6656000" />
       <workItem from="1710351694074" duration="4666000" />
+      <workItem from="1710387697539" duration="11329000" />
     </task>
     <servers />
   </component>

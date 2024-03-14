@@ -1,4 +1,4 @@
-package org.example.bo;
+package org.example.bo.custom;
 
 import org.example.entity.Books_Users;
 

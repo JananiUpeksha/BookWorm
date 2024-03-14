@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.Admin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,15 +9,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.bo.UserBO;
-import org.example.bo.UserBOimpl;
+import org.example.bo.custom.UserBO;
+import org.example.bo.custom.impl.UserBOimpl;
 import org.example.entity.Users;
 
-import javax.imageio.IIOParam;
 import java.io.IOException;
 import java.util.List;
 
-public class UserLoginController {
+public class AdminLoginController {
     @FXML
     private AnchorPane rootNode;
 
@@ -27,7 +26,6 @@ public class UserLoginController {
     @FXML
     private TextField txtPassword;
     private UserBO userBO = new UserBOimpl();
-    private IIOParam loader;
 
     @FXML
     void createAccountOnAction(ActionEvent event) throws IOException {
@@ -62,23 +60,18 @@ public class UserLoginController {
         }
 
         if (userFound) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/UserDash.fxml"));
-            Parent rootNode = loader.load();
+            Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminDash.fxml"));
             Scene scene = new Scene(rootNode);
-            Stage stage = (Stage)this.rootNode.getScene().getWindow();
-            stage.setScene(scene);
-            stage.setTitle("User Login Form");
-            stage.centerOnScreen();
-            stage.show();
-
-            /*BorrowController borrowController = loader.getController();
-
-            // Pass the username to the BorrowController
-            borrowController.setUsername(username);*/
+            Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+            Stage.setScene(scene);
+            Stage.setTitle("User Login Form");
+            Stage.centerOnScreen();
+            Stage.show();
         } else {
             // Username and/or password are incorrect
             new Alert(Alert.AlertType.ERROR, "Incorrect username or password.").show();
         }
 
     }
+
 }

@@ -1,8 +1,6 @@
-package org.example.controllers;
+package org.example.controllers.Admin;
 
 import TM.BooksTm;
-import TM.BranchTm;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,18 +8,15 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
-import org.example.bo.BooksBO;
-import org.example.bo.BooksBOimpl;
-import org.example.bo.BranchesBO;
-import org.example.bo.BranchesBOimpl;
-import org.example.dao.BranchDAO;
-import org.example.dao.BranchDAOimpl;
-import org.example.dto.BooksDto;
-import org.example.dto.BranchesDto;
+import org.example.bo.custom.BooksBO;
+import org.example.bo.custom.impl.BooksBOimpl;
+import org.example.bo.custom.BranchesBO;
+import org.example.bo.custom.impl.BranchesBOimpl;
+import org.example.dao.custom.BranchDAO;
+import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.entity.Books;
 import org.example.entity.Branches;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class BookMngController {

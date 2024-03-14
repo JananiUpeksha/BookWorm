@@ -1,5 +1,6 @@
-package org.example.dao;
+package org.example.dao.custom;
 
+import org.example.dao.SuperDAO;
 import org.example.entity.Books;
 
 import java.util.List;

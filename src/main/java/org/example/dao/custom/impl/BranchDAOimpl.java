@@ -1,19 +1,20 @@
-package org.example.dao;
+package org.example.dao.custom.impl;
 
 import config.FactoryConfiguration;
-import org.example.entity.Books;
+import org.example.dao.custom.BranchDAO;
+import org.example.entity.Branches;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class BooksDAOimpl implements BooksDAO {
+public class BranchDAOimpl implements BranchDAO {
     @Override
-    public boolean save(Books books) {
+    public boolean save(Branches branches) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            session.persist(books);
+            session.persist(branches);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -23,12 +24,12 @@ public class BooksDAOimpl implements BooksDAO {
     }
 
     @Override
-    public boolean delete(String title) {
+    public boolean delete(String branchName) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            Books books = session.get(Books.class, title);
-            if (books != null) {
-                session.delete(books);
+            Branches branches = session.get(Branches.class, branchName);
+            if (branches != null) {
+                session.delete(branches);
                 transaction.commit();
                 return true;
             }
@@ -40,10 +41,10 @@ public class BooksDAOimpl implements BooksDAO {
     }
 
     @Override
-    public boolean update(Books books) {
+    public boolean update(Branches branches) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            session.update(books);
+            session.update(branches);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -53,9 +54,9 @@ public class BooksDAOimpl implements BooksDAO {
     }
 
     @Override
-    public Books getBooks(String title) {
+    public Branches getBranches(String branchName) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            return session.get(Books.class, title);
+            return session.get(Branches.class, branchName);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -63,14 +64,13 @@ public class BooksDAOimpl implements BooksDAO {
     }
 
     @Override
-    public List<Books> getAll() {
+    public List<Branches> getAll() {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            Query<Books> query = session.createQuery("FROM Books ", Books.class);
+            Query<Branches> query = session.createQuery("FROM Branches ", Branches.class);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
-
 }

@@ -8,13 +8,13 @@ import java.util.List;
 @Entity
 public class Users  {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String email;
     private String name;
     private String password;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "users",cascade = CascadeType.ALL)
     /*@JoinTable(
             name = "Books_Users",
             joinColumns =  @JoinColumn(name = "name"),

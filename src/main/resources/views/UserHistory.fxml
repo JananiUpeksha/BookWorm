@@ -26,7 +26,7 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-      <TableView fx:id="tblBooks" layoutX="120.0" layoutY="226.0" prefHeight="535.0" prefWidth="920.0">
+      <TableView fx:id="tblBooks" layoutX="117.0" layoutY="184.0" prefHeight="535.0" prefWidth="920.0">
         <columns>
           <TableColumn fx:id="colTitle" prefWidth="228.0" text="Title" />
             <TableColumn fx:id="colBDate" prefWidth="210.0" text="Borrow Date" />
@@ -34,5 +34,10 @@
             <TableColumn fx:id="ColisReturned" prefWidth="256.0" text="Is Returned" />
         </columns>
       </TableView>
+      <Button layoutX="117.0" layoutY="741.0" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="45.0" prefWidth="168.0" style="-fx-background-radius: 10;" text="Log Out">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

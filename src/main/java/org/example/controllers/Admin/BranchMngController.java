@@ -5,18 +5,24 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.bo.custom.BranchesBO;
 import org.example.bo.custom.impl.BranchesBOimpl;
 import org.example.dto.Books_UserDto;
 import org.example.entity.Branches;
 
+import java.io.IOException;
 import java.util.List;
 
 public class BranchMngController {
@@ -197,4 +203,17 @@ public class BranchMngController {
         return true;
     }
 
+    public void homeOnActiom(ActionEvent actionEvent) {
+    }
+
+
+    /*public void homeOnActiom(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminDash.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Book History Form");
+        Stage.centerOnScreen();
+        Stage.show();
+    }*/
 }

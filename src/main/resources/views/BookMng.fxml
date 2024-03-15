@@ -17,48 +17,48 @@
             <Image url="@../assets/bg.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="txtTitle" layoutX="81.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtTitle" layoutX="79.0" layoutY="67.0" prefHeight="45.0" prefWidth="256.0" promptText="Title" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtAuthor" layoutX="460.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Author" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtAuthor" layoutX="458.0" layoutY="67.0" prefHeight="45.0" prefWidth="256.0" promptText="Author" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtGenre" layoutX="809.0" layoutY="86.0" prefHeight="45.0" prefWidth="256.0" promptText="Genre" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtGenre" layoutX="807.0" layoutY="67.0" prefHeight="45.0" prefWidth="256.0" promptText="Genre" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtAvailable" layoutX="296.0" layoutY="171.0" prefHeight="45.0" prefWidth="256.0" promptText="Available" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtAvailable" layoutX="294.0" layoutY="132.0" prefHeight="45.0" prefWidth="256.0" promptText="Available" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="125.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: #8E7AB5;" text="Save">
+      <Button layoutX="128.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: #8E7AB5;" text="Save">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="379.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
+      <Button layoutX="382.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="617.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
+      <Button layoutX="620.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="864.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FFF78A;" text="Delete">
+      <Button layoutX="867.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FFF78A;" text="Delete">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <ComboBox fx:id="comboBranch" layoutX="659.0" layoutY="171.0" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 20;" />
-      <TableView fx:id="tblBooks" layoutX="118.0" layoutY="409.0" prefHeight="365.0" prefWidth="905.0">
+      <ComboBox fx:id="comboBranch" layoutX="657.0" layoutY="132.0" prefHeight="45.0" prefWidth="256.0" style="-fx-background-radius: 20;" />
+      <TableView fx:id="tblBooks" layoutX="118.0" layoutY="342.0" prefHeight="365.0" prefWidth="905.0">
         <columns>
           <TableColumn fx:id="colTitle" prefWidth="182.0" text="Title" />
           <TableColumn fx:id="colAuthor" minWidth="0.0" prefWidth="173.0" text="Author" />
@@ -67,5 +67,12 @@
             <TableColumn fx:id="colBranch" minWidth="0.0" prefWidth="202.0" text="Branch" />
         </columns>
       </TableView>
+      <Button layoutX="118.0" layoutY="737.0" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10;" text="Log Out">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtId" layoutX="337.0" layoutY="748.0" text="id" />
+      <Button layoutX="589.0" layoutY="748.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
    </children>
 </AnchorPane>

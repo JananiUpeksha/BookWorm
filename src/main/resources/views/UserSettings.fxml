@@ -35,12 +35,12 @@
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="120.0" layoutY="566.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="248.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
+      <Button layoutX="120.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="360.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update My Profile">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="401.0" fitWidth="483.0" layoutX="634.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="401.0" fitWidth="483.0" layoutX="727.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/5.png" />
          </image>
@@ -51,5 +51,10 @@
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
+      <Button layoutX="127.0" layoutY="674.0" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="45.0" prefWidth="209.0" style="-fx-background-radius: 10;" text="Log Out">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

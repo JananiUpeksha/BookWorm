@@ -117,4 +117,13 @@ public class AdminDashController {
     }
 
 
+    public void logoutOnACtion(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminLogin.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Book History Form");
+        Stage.centerOnScreen();
+        Stage.show();
+    }
 }

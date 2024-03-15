@@ -11,11 +11,14 @@ public class Books_Users {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "user_name") // Assuming "name" is unique in Users
+    @JoinColumn(name = "user_id")
     private Users user;
 
+    /*@ManyToOne
+    @JoinColumn(name = "book_title ") // Assuming "title" is the primary key of the Books entity
+    private Books book;*/
     @ManyToOne
-   /* @JoinColumn(name = "book_title")*/ // Assuming "title" is the primary key of the Books entity
+    @JoinColumn(name = "book_id") // Referencing the title column in Books
     private Books book;
 
     @Column(name = "issue_date")
@@ -26,6 +29,9 @@ public class Books_Users {
 
     @Column(name = "is_return")
     private Boolean isReturn;
+
+    @Column(name = "book_title")
+    private String book_title;
 
 
     public Books_Users() {
@@ -38,6 +44,38 @@ public class Books_Users {
         this.issueDate = issueDate;
         this.returnDate = returnDate;
         this.isReturn = isReturn;
+    }
+    public Books_Users(Users user, Books book, LocalDate issueDate, LocalDate returnDate, Boolean isReturn) {
+        this.user = user;
+        this.book = book;
+        this.issueDate = issueDate;
+        this.returnDate = returnDate;
+        this.isReturn = isReturn;
+    }
+    public Books_Users(Users user, Books book, LocalDate issueDate, LocalDate returnDate) {
+        this.user = user;
+        this.book = book;
+        this.issueDate = issueDate;
+        this.returnDate = returnDate;
+    }
+
+    public Books_Users(int id, Users user, Books book, LocalDate issueDate, LocalDate returnDate, Boolean isReturn, String book_title) {
+        this.id = id;
+        this.user = user;
+        this.book = book;
+        this.issueDate = issueDate;
+        this.returnDate = returnDate;
+        this.isReturn = isReturn;
+        this.book_title = book_title;
+    }
+
+    public Books_Users(Users user, Books book, LocalDate issueDate, LocalDate returnDateValue, boolean b, String title) {
+        this.user = user;
+        this.book = book;
+        this.issueDate = issueDate;
+        this.returnDate = returnDate;
+        this.isReturn = isReturn;
+        this.book_title = book_title;
     }
 
     public int getId() {
@@ -98,5 +136,13 @@ public class Books_Users {
                 ", returnDate=" + returnDate +
                 ", isReturn=" + isReturn +
                 '}';
+    }
+
+    public String getBook_title() {
+        return book_title;
+    }
+
+    public void setBook_title(String book_title) {
+        this.book_title = book_title;
     }
 }

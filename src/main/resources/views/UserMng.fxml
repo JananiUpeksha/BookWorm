@@ -63,7 +63,7 @@
          </font>
       </Button>
       <ComboBox fx:id="comboBranch" layoutX="796.0" layoutY="47.0" prefHeight="45.0" prefWidth="256.0" style="-fx-border-radius: 20;" />
-      <TableView fx:id="tblUser" layoutX="142.0" layoutY="374.0" prefHeight="368.0" prefWidth="907.0">
+      <TableView fx:id="tblUser" layoutX="142.0" layoutY="340.0" prefHeight="368.0" prefWidth="907.0">
         <columns>
           <TableColumn fx:id="colName" prefWidth="185.0" text="User Name" />
             <TableColumn fx:id="colPassword" prefWidth="185.0" text="Password" />
@@ -71,5 +71,10 @@
             <TableColumn fx:id="colEmail" prefWidth="351.0" text="E-mail" />
         </columns>
       </TableView>
+      <Button layoutX="142.0" layoutY="736.0" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10;" text="Log Out">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

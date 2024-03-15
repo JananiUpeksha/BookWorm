@@ -3,6 +3,7 @@ package org.example.dao.custom.impl;
 import config.FactoryConfiguration;
 import org.example.dao.custom.BooksDAO;
 import org.example.entity.Books;
+import org.example.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -24,12 +25,12 @@ public class BooksDAOimpl implements BooksDAO {
     }
 
     @Override
-    public boolean delete(String title) {
+    public boolean delete(int id) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            Books books = session.get(Books.class, title);
-            if (books != null) {
-                session.delete(books);
+            Books book = session.get(Books.class, id);
+            if (book != null) {
+                session.delete(book);
                 transaction.commit();
                 return true;
             }
@@ -53,13 +54,23 @@ public class BooksDAOimpl implements BooksDAO {
         }
     }
 
-    @Override
+   /* @Override
     public Books getBooks(String title) {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             return session.get(Books.class, title);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }*/
+    @Override
+    public Books getBookByTitle(String title) throws Exception {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            return session.createQuery("FROM Books b WHERE b.title = :title", Books.class)
+                    .setParameter("title", title)
+                    .uniqueResult();
+        } catch (Exception ex) {
+            throw new Exception("Error while retrieving book by title: " + title, ex);
         }
     }
 
@@ -68,6 +79,15 @@ public class BooksDAOimpl implements BooksDAO {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {
             Query<Books> query = session.createQuery("FROM Books ", Books.class);
             return query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    @Override
+    public Books getBook(int id) {
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            return session.get(Books.class, id);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

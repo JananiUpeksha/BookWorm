@@ -27,7 +27,7 @@ public class UserLoginController {
     @FXML
     private TextField txtPassword;
     private UserBO userBO = new UserBOimpl();
-    private IIOParam loader;
+    private List<Users> users;
 
     @FXML
     void createAccountOnAction(ActionEvent event) throws IOException {
@@ -52,7 +52,6 @@ public class UserLoginController {
 
         List<Users> users = userBO.getAll();
 
-        // Check if any user has the provided username and password
         boolean userFound = false;
         for (Users user : users) {
             if (user.getName().equals(username) && user.getPassword().equals(password)) {
@@ -67,18 +66,45 @@ public class UserLoginController {
             Scene scene = new Scene(rootNode);
             Stage stage = (Stage)this.rootNode.getScene().getWindow();
             stage.setScene(scene);
-            stage.setTitle("User Login Form");
+            stage.setTitle("User Dash Board");
             stage.centerOnScreen();
             stage.show();
 
-            /*BorrowController borrowController = loader.getController();
-
-            // Pass the username to the BorrowController
-            borrowController.setUsername(username);*/
         } else {
             // Username and/or password are incorrect
             new Alert(Alert.AlertType.ERROR, "Incorrect username or password.").show();
         }
 
+    }
+    @FXML
+    void initialize() {
+        // Load the list of users when the controller is initialized
+        users = userBO.getAll();
+
+        // Add a listener to the username text field to monitor text changes
+        txtName.textProperty().addListener((observable, oldValue, newValue) -> {
+            // Call the method to display the password based on the entered username
+            displayPassword(newValue);
+        });
+    }
+
+    // Other methods...
+
+    // Method to display the password based on the entered username
+    private void displayPassword(String username) {
+        // Check if the username is at least half entered
+        if (username.length() >= txtName.getLength() / 2) {
+            // Find the user with the entered username
+            for (Users user : users) {
+                if (user.getName().startsWith(username)) {
+                    // Display the password corresponding to the entered username
+                    txtPassword.setText(user.getPassword());
+                    return; // Exit the method after displaying the password
+                }
+            }
+        } else {
+            // Clear the password field if the username is less than half entered
+            txtPassword.clear();
+        }
     }
 }

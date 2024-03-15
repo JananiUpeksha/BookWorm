@@ -5,12 +5,21 @@ import org.example.entity.Books;
 import org.example.entity.Branches;
 
 public class BooksDto {
-    @Id
+    private int id;
     private String title;
     private String author;
     private String genre;
     private boolean availability = true;
     private String branch;
+
+    public BooksDto(int id, String title, String author, String genre, boolean availability, String branch) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+        this.branch = branch;
+    }
 
     public String getBranch() {
         return branch;
@@ -72,7 +81,7 @@ public class BooksDto {
         this.genre = genre;
     }
 
-    public boolean isAvailability() {
+    public boolean getAvailability() {
         return availability;
     }
 
@@ -93,4 +102,15 @@ public class BooksDto {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isAvailability() {
+        return availability;
+    }
 }

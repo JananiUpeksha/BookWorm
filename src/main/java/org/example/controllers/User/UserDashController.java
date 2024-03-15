@@ -118,4 +118,14 @@ public class UserDashController {
         Stage.centerOnScreen();
         Stage.show();
     }
+
+    public void homeOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserLogin.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Book History Form");
+        Stage.centerOnScreen();
+        Stage.show();
+    }
 }

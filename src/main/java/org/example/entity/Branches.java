@@ -1,9 +1,6 @@
 package org.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -16,7 +13,7 @@ public class Branches {
 
     private String branchAdmin;
 
-  @OneToMany(mappedBy = "branch")
+  @OneToMany(mappedBy = "branch",cascade = CascadeType.ALL)
     private List<Users> users;
 
     @OneToMany(mappedBy = "branch")

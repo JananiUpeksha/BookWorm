@@ -1,8 +1,5 @@
 package org.example.controllers.User;
 
-import TM.BooksTm;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +9,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.custom.BooksBO;
@@ -28,7 +24,6 @@ import org.example.entity.Users;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 
 
 public class BorrowController {
@@ -111,57 +106,6 @@ public class BorrowController {
             new Alert(Alert.AlertType.WARNING, "Please enter a username").show();
         }
     }
-    /*public void btnBorrowOnAction(ActionEvent actionEvent) {
-        String title = txtTitle.getText();
-        String author = txtAuthor.getText();
-        LocalDate issueDate = borrowDate.getValue();
-        LocalDate returnDateValue = returnDate.getValue();
-       // String currentUserName = txtName.getText(); // Retrieving username from the text field
-        int userId;
-
-        try {
-            userId = Integer.parseInt(lblId.getText());
-        } catch (NumberFormatException e) {
-            new Alert(Alert.AlertType.ERROR, "Invalid user ID").show();
-            return;
-        }
-
-        Users user = userBO.getUser(userId); // Retrieve the user by ID
-
-        if (user == null) {
-            new Alert(Alert.AlertType.ERROR, "User not found").show();
-            return;
-        }
-
-        if (title != null && !title.isEmpty() && author != null && !author.isEmpty() && issueDate != null && returnDateValue != null) {
-            Books_Users entity = new Books_Users();
-            Books book = booksBO.getBooks(title);
-
-            entity.setUser(user);
-            entity.setBook(book);
-            entity.setIssueDate(issueDate);
-            entity.setReturnDate(returnDateValue);
-            entity.setReturn(false);
-
-            boolean isSaved = books_usersBO.save(entity);
-            if (isSaved) {
-                updateBookAvailability(book);
-                new Alert(Alert.AlertType.CONFIRMATION, "Your book borrowing process is successful").show();
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Failed to save transaction data").show();
-            }
-        } else {
-            new Alert(Alert.AlertType.INFORMATION, "Please fill in all the required fields").show();
-        }
-    }
-
-    // Method to update the book's availability
-    private void updateBookAvailability(Books book) {
-        if (book != null) {
-            book.setAvailability(false);
-            booksBO.update(book);
-        }
-    }*/
     public void btnBorrowOnAction(ActionEvent actionEvent) {
         String title = txtTitle.getText();
         LocalDate issueDate = borrowDate.getValue();
@@ -185,20 +129,14 @@ public class BorrowController {
 
         if (title != null && !title.isEmpty() && issueDate != null && returnDateValue != null) {
             try {
-                // Get the book by title
                 Books book = booksBO.getBookByTitle(title);
-
-                // Check if the book exists
                 if (book != null) {
-                    // Check if the book is available
                     if (book.isAvailability()) {
-                        // Save borrowing transaction
-                        boolean isReturn = false; // Assuming the book is not returned initially
+                        boolean isReturn = false;
                         Books_Users booksUsers = new Books_Users(user, book, issueDate, returnDateValue, isReturn);
                         boolean isSaved = books_usersBO.save(booksUsers);
 
                         if (isSaved) {
-                            // Update book availability to unavailable
                             book.setAvailability(false);
                             booksBO.update(book);
 
@@ -222,7 +160,7 @@ public class BorrowController {
     }
 
 
-    public void homeOnAction(MouseEvent mouseEvent) throws IOException {
+    public void homeOnAction(ActionEvent actionEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/UserDash.fxml"));
         Scene scene = new Scene(rootNode);
         Stage Stage = (Stage)this.rootNode.getScene().getWindow();

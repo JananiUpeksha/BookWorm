@@ -80,24 +80,17 @@ public class UserMngController {
                 return;
             }
 
-            // Retrieve the Branches object corresponding to the selected branch name
             Branches selectedBranch = branchDAO.getBranches(selectedBranchName);
-
-            // Check if the branch is found
             if (selectedBranch == null) {
                 new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
                 return;
             }
-
-            // Create a Users entity with the retrieved branch
             Users user = new Users(email, name, password, selectedBranch);
 
-            // Call the save method of userBO to save the user
             boolean isSaved = userBO.save(user);
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-                // Clear fields or perform any other necessary action
             }
             tblUser.refresh();}
     }
@@ -112,14 +105,11 @@ public class UserMngController {
             txtName.setText(userDto.getName());
             txtPassword.setText(userDto.getPassword());
 
-            // Initialize the branch to avoid LazyInitializationException
             Branches branch = userDto.getBranch();
             if (branch != null) {
                 comboBranch.setValue(branch.getBranchName());
             } else {
-                // Handle the case where the branch is not initialized
                 comboBranch.setValue(null);
-                // Display an error message or handle it in a way suitable for your application
             }
         } else {
             new Alert(Alert.AlertType.ERROR, "User not found").show();
@@ -132,15 +122,11 @@ public class UserMngController {
         int id = Integer.parseInt(txtId.getText());
         String selectedBranchName = (String) comboBranch.getValue();
 
-        // Create a UserDto object with the updated information
         UserDto userDto = new UserDto(id, email, name, password, selectedBranchName);
-
-        // Call the update method of userBO to save the changes
         boolean isUpdated = userBO.update(userDto);
 
         if (isUpdated) {
             new Alert(Alert.AlertType.CONFIRMATION, "User updated successfully").show();
-            // Optionally, clear fields or perform any other necessary action
         } else {
             new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
         }
@@ -161,8 +147,6 @@ public class UserMngController {
                 txtName.setText(selectedUser.getName());
                 txtEmail.setText(selectedUser.getEmail());
                 txtPassword.setText(selectedUser.getPassword());
-                // Assuming branch is a String property of the Users class
-                // If it's a separate entity, you may need to handle it differently
                 comboBranch.setValue(selectedUser.getBranch());
             }
         });

@@ -71,26 +71,18 @@ public class UserLoginController {
             stage.show();
 
         } else {
-            // Username and/or password are incorrect
             new Alert(Alert.AlertType.ERROR, "Incorrect username or password.").show();
         }
 
     }
     @FXML
     void initialize() {
-        // Load the list of users when the controller is initialized
         users = userBO.getAll();
-
-        // Add a listener to the username text field to monitor text changes
         txtName.textProperty().addListener((observable, oldValue, newValue) -> {
-            // Call the method to display the password based on the entered username
             displayPassword(newValue);
         });
     }
 
-    // Other methods...
-
-    // Method to display the password based on the entered username
     private void displayPassword(String username) {
         // Check if the username is at least half entered
         if (username.length() >= txtName.getLength() / 2) {

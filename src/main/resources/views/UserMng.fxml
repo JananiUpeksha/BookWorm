@@ -17,12 +17,12 @@
                 <Image url="@../assets/bg.jpg" />
             </image>
         </ImageView>
-        <TextField fx:id="txtName" layoutX="87.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtName" layoutX="136.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="User Name" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtPassword" layoutX="410.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtPassword" layoutX="433.0" layoutY="138.0" prefHeight="45.0" prefWidth="256.0" promptText="Password" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
@@ -52,12 +52,12 @@
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-      <TextField fx:id="txtId" layoutX="87.0" layoutY="47.0" prefHeight="45.0" prefWidth="256.0" promptText="ID" style="-fx-background-radius: 15;">
+      <TextField fx:id="txtId" layoutX="136.0" layoutY="47.0" prefHeight="45.0" prefWidth="256.0" promptText="ID" style="-fx-background-radius: 15;">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="372.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="187.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
+      <Button layoutX="421.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="187.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Search">
          <font>
             <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
          </font>

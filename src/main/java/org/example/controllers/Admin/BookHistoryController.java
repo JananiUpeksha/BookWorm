@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -28,7 +27,7 @@ public class BookHistoryController {
 
     }
 
-    public void homeOnAction(MouseEvent mouseEvent) throws IOException {
+    public void homeOnAction(ActionEvent mouseEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminDash.fxml"));
         Scene scene = new Scene(rootNode);
         Stage Stage = (Stage)this.rootNode.getScene().getWindow();

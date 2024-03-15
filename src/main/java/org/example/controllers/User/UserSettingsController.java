@@ -40,25 +40,19 @@ public class UserSettingsController {
         String password = txtPassword.getText();
         int userId = Integer.parseInt(txtId.getText());
 
-        // Validate the input fields
         if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
             return;
         }
 
-        // Retrieve the selected branch from the combo box
         String selectedBranchName = (String) comboBranch.getValue();
         Branches selectedBranch = branchDAO.getBranches(selectedBranchName);
 
-        // Create a UserDto object with the updated information
         UserDto userDto = new UserDto(userId, email, name, password, selectedBranchName);
-
-        // Call the update method of userBO to save the changes
         boolean isUpdated = userBO.update(userDto);
 
         if (isUpdated) {
             new Alert(Alert.AlertType.CONFIRMATION, "User updated successfully").show();
-            //clearFields();
         } else {
             new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
         }
@@ -75,14 +69,11 @@ public class UserSettingsController {
                 txtName.setText(userDto.getName());
                 txtPassword.setText(userDto.getPassword());
 
-                // Initialize the branch to avoid LazyInitializationException
                 Branches branch = userDto.getBranch();
                 if (branch != null) {
                     comboBranch.setValue(branch.getBranchName());
                 } else {
-                    // Handle the case where the branch is not initialized
                     comboBranch.setValue(null);
-                    // Display an error message or handle it in a way suitable for your application
                 }
             } else {
                 new Alert(Alert.AlertType.ERROR, "User not found").show();

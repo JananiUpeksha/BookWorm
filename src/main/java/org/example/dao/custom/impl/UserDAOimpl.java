@@ -85,23 +85,6 @@ public class UserDAOimpl implements UserDAO {
             e.printStackTrace();
             return false;
         }
-        /*try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            Transaction transaction = session.beginTransaction();
-            User existingUser = session.get(User.class, user.getId());
-            if (existingUser != null) {
-                existingUser.setEmail(user.getEmail());
-                existingUser.setName(user.getName());
-                existingUser.setPassword(user.getPassword());
-                session.update(existingUser);
-                transaction.commit();
-                return true;
-            }
-            return false; // Return false if user with given ID does not exist
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }*/
-
     }
     @Override
     public Users getUser(int id) {

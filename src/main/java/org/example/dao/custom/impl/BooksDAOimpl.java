@@ -54,15 +54,6 @@ public class BooksDAOimpl implements BooksDAO {
         }
     }
 
-   /* @Override
-    public Books getBooks(String title) {
-        try (Session session = FactoryConfiguration.getInstance().getSession()) {
-            return session.get(Books.class, title);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }*/
     @Override
     public Books getBookByTitle(String title) throws Exception {
         try (Session session = FactoryConfiguration.getInstance().getSession()) {

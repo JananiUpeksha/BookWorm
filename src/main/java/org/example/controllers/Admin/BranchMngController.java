@@ -74,7 +74,6 @@ public class BranchMngController {
                 return;
             }
             Branches branches = new Branches(branchName,location,admin);
-            // Call save method of booksBO
             boolean isSaved = branchesBO.save(branches);
 
             if (isSaved) {
@@ -91,21 +90,17 @@ public class BranchMngController {
         String location = txtLocation.getText();
         String admin = txtAdmninName.getText();
 
-        // Check if the branch name is empty
         if (branchName.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please enter the branch name").show();
             return;
         }
 
-        // Retrieve the existing branch
         Branches existingBranch = branchesBO.getBranches(branchName);
 
         if (existingBranch != null) {
-            // Update the branch details
             existingBranch.setLocation(location);
             existingBranch.setBranchAdmin(admin);
 
-            // Call update method of branchesBO
             boolean isUpdated = branchesBO.update(existingBranch);
 
             if (isUpdated) {
@@ -120,10 +115,8 @@ public class BranchMngController {
         }
     }
     public void initialize() {
-        // Add an event listener to txtTitle to handle Enter key press
         txtBranchName.setOnKeyPressed(event -> {
             if (event.getCode().equals(KeyCode.ENTER)) {
-                // Call a method to fetch book details and display them
                 fetchAndDisplayBranchDetails();
             }
         });
@@ -135,12 +128,10 @@ public class BranchMngController {
 
     private void loadAllBranches() {
         ObservableList<BranchTm> observableList = FXCollections.observableArrayList();
-        List<Branches> branchesList = branchesBO.getAll(); // Assuming you have a branchesBO object
+        List<Branches> branchesList = branchesBO.getAll();
         for (Branches branch : branchesList) {
-            // Create BranchTm object using branch details and add it to the observable list
             observableList.add(new BranchTm(branch.getBranchName(), branch.getLocation(), branch.getBranchAdmin()));
         }
-        // Clear existing items and set the new observable list
         tblBranch.getItems().clear();
         tblBranch.setItems(observableList);
     }
@@ -203,17 +194,14 @@ public class BranchMngController {
         return true;
     }
 
-    public void homeOnActiom(ActionEvent actionEvent) {
-    }
-
-
-    /*public void homeOnActiom(ActionEvent actionEvent) throws IOException {
+    public void homeOnActiom(ActionEvent actionEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminDash.fxml"));
         Scene scene = new Scene(rootNode);
         Stage Stage = (Stage)this.rootNode.getScene().getWindow();
         Stage.setScene(scene);
-        Stage.setTitle("Book History Form");
+        Stage.setTitle("Admin Dashzboard Form");
         Stage.centerOnScreen();
         Stage.show();
-    }*/
+    }
+
 }

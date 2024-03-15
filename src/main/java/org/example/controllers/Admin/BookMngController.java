@@ -10,17 +10,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.custom.BooksBO;
 import org.example.bo.custom.BranchesBO;
 import org.example.bo.custom.impl.BooksBOimpl;
 import org.example.bo.custom.impl.BranchesBOimpl;
-import org.example.dto.BooksDto;
 import org.example.entity.Books;
 import org.example.entity.Branches;
-import org.example.entity.Users;
 
 import java.io.IOException;
 import java.util.List;
@@ -54,7 +51,7 @@ public class BookMngController {
             if (!available.isEmpty()) {
                 isAvailable = Boolean.parseBoolean(available);
             } else {
-                isAvailable = true; // Default to true if the field is empty
+                isAvailable = true;
             }
 
             if (selectedBranch != null) {
@@ -186,7 +183,7 @@ public class BookMngController {
         return true;
     }
 
-    public void homeOnAction(MouseEvent mouseEvent) throws IOException {
+    public void homeOnAction(ActionEvent mouseEvent) throws IOException {
         Parent rootNode = FXMLLoader.load(getClass().getResource("/views/AdminDash.fxml"));
         Scene scene = new Scene(rootNode);
         Stage stage = (Stage) rootNode.getScene().getWindow();
@@ -207,14 +204,11 @@ public class BookMngController {
             txtAvailable.setText(String.valueOf(booksDto.isAvailability()));
             comboBranch.getValue();
 
-            // Initialize the branch to avoid LazyInitializationException
             Branches branch = booksDto.getBranch();
             if (branch != null) {
                 comboBranch.setValue(branch.getBranchName());
             } else {
-                // Handle the case where the branch is not initialized
                 comboBranch.setValue(null);
-                // Display an error message or handle it in a way suitable for your application
             }
         } else {
             new Alert(Alert.AlertType.ERROR, "User not found").show();
@@ -245,7 +239,7 @@ public class BookMngController {
         if (!available.isEmpty()) {
             isAvailable = Boolean.parseBoolean(available);
         } else {
-            isAvailable = true; // Default to true if the field is empty
+            isAvailable = true;
         }
 
         if (selectedBranch != null) {
@@ -262,8 +256,6 @@ public class BookMngController {
                 } else {
                     new Alert(Alert.AlertType.ERROR, "Failed to update book").show();
                 }
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Selected branch not found").show();
             }
         } else {
             new Alert(Alert.AlertType.ERROR, "Please select a branch").show();

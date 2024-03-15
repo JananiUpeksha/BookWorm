@@ -9,56 +9,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="763.0" prefWidth="1143.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Admin.BranchMngController">
+<AnchorPane fx:id="rootNode" prefHeight="737.0" prefWidth="1154.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.Admin.BranchMngController">
     <children>
-      <ImageView fitHeight="764.0" fitWidth="1167.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="738.0" fitWidth="1176.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/content.jpg" />
+            <Image url="@../assets/bg.jpg" />
          </image>
       </ImageView>
-        <TextField fx:id="txtBranchName" layoutX="102.0" layoutY="93.0" prefHeight="45.0" prefWidth="256.0" promptText="Branch Name" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtBranchName" layoutX="103.0" layoutY="57.0" prefHeight="45.0" prefWidth="256.0" promptText="Branch Name" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtLocation" layoutX="455.0" layoutY="93.0" prefHeight="45.0" prefWidth="256.0" promptText="Location" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtLocation" layoutX="456.0" layoutY="57.0" prefHeight="45.0" prefWidth="256.0" promptText="Location" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <TextField fx:id="txtAdmninName" layoutX="800.0" layoutY="93.0" prefHeight="45.0" prefWidth="256.0" promptText="Branch Admin" style="-fx-background-radius: 15;">
+        <TextField fx:id="txtAdmninName" layoutX="801.0" layoutY="57.0" prefHeight="45.0" prefWidth="256.0" promptText="Branch Admin" style="-fx-background-radius: 15;">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </TextField>
-        <Button layoutX="150.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: #8E7AB5;" text="Save">
+        <Button layoutX="147.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: #8E7AB5;" text="Save">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="394.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
+        <Button layoutX="391.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FF9F9F;" text="Update">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="627.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
+        <Button layoutX="624.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: ECCDB4;" text="Clear">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <Button layoutX="855.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FFF78A;" text="Delete">
+        <Button layoutX="852.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10; -fx-background-color: FFF78A;" text="Delete">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>
         </Button>
-        <TableView fx:id="tblBranch" layoutX="151.0" layoutY="299.0" prefHeight="411.0" prefWidth="858.0">
+        <TableView fx:id="tblBranch" layoutX="147.0" layoutY="217.0" prefHeight="411.0" prefWidth="858.0">
             <columns>
                 <TableColumn fx:id="colBranchName" prefWidth="274.0" text="Branch Name" />
                 <TableColumn fx:id="colLocation" prefWidth="275.0" text="Location" />
                 <TableColumn fx:id="colAdminName" prefWidth="308.0" text="Branch Admin Name" />
             </columns>
         </TableView>
-        <Button layoutY="638.0" mnemonicParsing="false" onAction="#homeOnActiom" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10;" text="Log Out">
+        <Button layoutX="140.0" layoutY="658.0" mnemonicParsing="false" onAction="#homeOnActiom" prefHeight="45.0" prefWidth="147.0" style="-fx-background-radius: 10;" text="Log Out">
             <font>
                 <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
             </font>

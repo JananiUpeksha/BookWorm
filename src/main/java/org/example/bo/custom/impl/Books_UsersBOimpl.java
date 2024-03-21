@@ -17,4 +17,14 @@ public class Books_UsersBOimpl implements Books_UsersBO {
         return booksUsersDAO.save(books_users);
     }
 
+    @Override
+    public List<Books_Users>getBooksUsersByUserId(int userId) {
+        return booksUsersDAO.getBooksUsersByUserId(userId);
+    }
+
+    @Override
+    public boolean updateBooksUsers(Books_Users books_users) {
+        return booksUsersDAO.updateBooksUsers(books_users);
+    }
+
 }

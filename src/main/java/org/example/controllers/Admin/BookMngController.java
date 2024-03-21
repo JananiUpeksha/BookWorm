@@ -183,14 +183,14 @@ public class BookMngController {
         return true;
     }
 
-    public void homeOnAction(ActionEvent mouseEvent) throws IOException {
-        Parent rootNode = FXMLLoader.load(getClass().getResource("/views/AdminDash.fxml"));
+    public void homeOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/AdminDash.fxml"));
         Scene scene = new Scene(rootNode);
-        Stage stage = (Stage) rootNode.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Book History Form");
-        stage.centerOnScreen();
-        stage.show();
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Admin Dashzboard Form");
+        Stage.centerOnScreen();
+        Stage.show();
     }
 
     public void searchOnAction(ActionEvent actionEvent) {
@@ -261,4 +261,5 @@ public class BookMngController {
             new Alert(Alert.AlertType.ERROR, "Please select a branch").show();
         }
     }
+
 }

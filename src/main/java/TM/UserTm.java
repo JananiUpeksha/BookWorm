@@ -58,4 +58,8 @@ public class UserTm {
                 ", branches='" + branches + '\'' +
                 '}';
     }
+
+    public String getBranch() {
+        return branches;
+    }
 }

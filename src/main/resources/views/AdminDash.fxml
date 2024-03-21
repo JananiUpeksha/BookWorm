@@ -40,11 +40,6 @@
                   <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutY="430.0" mnemonicParsing="false" onAction="#btnUserHistoryOnACtion" prefHeight="80.0" prefWidth="254.0" style="-fx-background-color: #8E7AB5;" text="User History" textFill="WHITE">
-               <font>
-                  <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
-               </font>
-            </Button>
             <Button layoutX="61.0" layoutY="673.0" mnemonicParsing="false" onAction="#logoutOnACtion" prefHeight="40.0" prefWidth="133.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Log Out" textFill="#8e7ab5">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />

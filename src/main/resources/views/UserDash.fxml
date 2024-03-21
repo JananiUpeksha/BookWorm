@@ -35,12 +35,7 @@
                   <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutY="350.0" mnemonicParsing="false" onAction="#userHistoryOnACtion" prefHeight="80.0" prefWidth="254.0" style="-fx-background-color: #8E7AB5;" text="User History" textFill="WHITE">
-               <font>
-                  <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
-               </font>
-            </Button>
-            <Button alignment="BASELINE_LEFT" layoutY="430.0" mnemonicParsing="false" onAction="#userSettingOnACtion" prefHeight="80.0" prefWidth="254.0" style="-fx-background-color: #8E7AB5;" text="User Settings" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" layoutX="1.0" layoutY="360.0" mnemonicParsing="false" onAction="#userSettingOnACtion" prefHeight="80.0" prefWidth="254.0" style="-fx-background-color: #8E7AB5;" text="User Settings" textFill="WHITE">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="16.0" />
                </font>

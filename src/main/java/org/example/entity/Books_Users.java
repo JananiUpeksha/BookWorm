@@ -17,7 +17,7 @@ public class Books_Users {
     /*@ManyToOne
     @JoinColumn(name = "book_title ") // Assuming "title" is the primary key of the Books entity
     private Books book;*/
-    @ManyToOne
+    @ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "book_id") // Referencing the title column in Books
     private Books book;
 
@@ -30,9 +30,9 @@ public class Books_Users {
     @Column(name = "is_return")
     private Boolean isReturn;
 
-    @Column(name = "book_title")
+    /*@Column(name = "book_title")
     private String book_title;
-
+*/
 
     public Books_Users() {
     }
@@ -66,7 +66,7 @@ public class Books_Users {
         this.issueDate = issueDate;
         this.returnDate = returnDate;
         this.isReturn = isReturn;
-        this.book_title = book_title;
+        //this.book_title = book_title;
     }
 
     public Books_Users(Users user, Books book, LocalDate issueDate, LocalDate returnDateValue, boolean b, String title) {
@@ -75,7 +75,7 @@ public class Books_Users {
         this.issueDate = issueDate;
         this.returnDate = returnDate;
         this.isReturn = isReturn;
-        this.book_title = book_title;
+        //this.book_title = book_title;
     }
 
     public int getId() {
@@ -138,11 +138,22 @@ public class Books_Users {
                 '}';
     }
 
-    public String getBook_title() {
+   /* public String getBook_title() {
         return book_title;
     }
 
     public void setBook_title(String book_title) {
         this.book_title = book_title;
+    }*/
+   public Boolean getIsReturn() {
+       return isReturn;
+   }
+
+    public void setIsReturn(Boolean isReturn) {
+        this.isReturn = isReturn;
+    }
+
+    public boolean isReturn() {
+       return isReturn;
     }
 }

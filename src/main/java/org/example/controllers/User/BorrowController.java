@@ -130,10 +130,12 @@ public class BorrowController {
         if (title != null && !title.isEmpty() && issueDate != null && returnDateValue != null) {
             try {
                 Books book = booksBO.getBookByTitle(title);
+
                 if (book != null) {
                     if (book.isAvailability()) {
                         boolean isReturn = false;
                         Books_Users booksUsers = new Books_Users(user, book, issueDate, returnDateValue, isReturn);
+
                         boolean isSaved = books_usersBO.save(booksUsers);
 
                         if (isSaved) {

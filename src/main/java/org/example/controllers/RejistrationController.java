@@ -4,9 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.bo.custom.UserBO;
 import org.example.bo.custom.impl.UserBOimpl;
 import org.example.dao.custom.BranchDAO;
@@ -14,6 +18,7 @@ import org.example.dao.custom.impl.BranchDAOimpl;
 import org.example.entity.Branches;
 import org.example.entity.Users;
 
+import java.io.IOException;
 import java.util.List;
 
 public class RejistrationController {
@@ -83,4 +88,13 @@ public class RejistrationController {
             comboBranch.setItems(obList);
         }
 
+    public void backOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/views/Welcome.fxml"));
+        Scene scene = new Scene(rootNode);
+        Stage Stage = (Stage)this.rootNode.getScene().getWindow();
+        Stage.setScene(scene);
+        Stage.setTitle("Welcome Form");
+        Stage.centerOnScreen();
+        Stage.show();
+    }
 }

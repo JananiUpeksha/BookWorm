@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.Hibernate;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Books {
     private String genre;
     @Column
     private boolean availability = true;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "books_users", // Specify the name of the join table
             joinColumns = @JoinColumn(name = "user_id"),
@@ -124,6 +125,8 @@ public class Books {
 
     @Override
     public String toString() {
+            // Ensure the users collection is initialized
+            Hibernate.initialize(users);
         return "Books{" +
                 "id=" + id +
                 ", title='" + title + '\'' +

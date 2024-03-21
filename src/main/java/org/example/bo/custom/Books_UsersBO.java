@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface Books_UsersBO {
     public boolean save(Books_Users books_users);
+    public List<Books_Users> getBooksUsersByUserId(int userId);
+    public boolean updateBooksUsers(Books_Users books_users);
 }

@@ -91,8 +91,10 @@ public class UserMngController {
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
+                loadAllUsers();
+                tblUser.refresh();}
             }
-            tblUser.refresh();}
+
     }
 
     @FXML
@@ -127,10 +129,12 @@ public class UserMngController {
 
         if (isUpdated) {
             new Alert(Alert.AlertType.CONFIRMATION, "User updated successfully").show();
+            loadAllUsers();
+            tblUser.refresh();
         } else {
             new Alert(Alert.AlertType.ERROR, "Failed to update user").show();
         }
-        tblUser.refresh();
+
     }
 
     public void initialize(){
@@ -143,7 +147,7 @@ public class UserMngController {
     private void tableListener() {
         tblUser.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                Users selectedUser = (Users) newValue;
+                UserTm selectedUser = (UserTm) newValue;
                 txtName.setText(selectedUser.getName());
                 txtEmail.setText(selectedUser.getEmail());
                 txtPassword.setText(selectedUser.getPassword());

@@ -1131,8 +1131,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="312" parent="1" name="BookWorm">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-03-15.23:26:08</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-03-15.12:26:08</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-03-18.03:12:59</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-03-17.16:12:59</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="313" parent="1" name="Pavithrani">
@@ -1194,7 +1194,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="327" parent="321" name="availability">
       <DasType>bit(1)|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="328" parent="321" name="genre">
@@ -1252,7 +1251,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="340" parent="323" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1298,54 +1297,50 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="350" parent="324" name="book_title">
-      <DasType>varchar(255)|0s</DasType>
+    <column id="350" parent="324" name="is_return">
+      <DasType>bit(1)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="351" parent="324" name="is_return">
-      <DasType>bit(1)|0s</DasType>
+    <column id="351" parent="324" name="issue_date">
+      <DasType>date|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="352" parent="324" name="issue_date">
+    <column id="352" parent="324" name="return_date">
       <DasType>date|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="353" parent="324" name="return_date">
-      <DasType>date|0s</DasType>
+    <column id="353" parent="324" name="book_id">
+      <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="354" parent="324" name="book_id">
+    <column id="354" parent="324" name="user_id">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="355" parent="324" name="user_id">
-      <DasType>int|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <foreign-key id="356" parent="324" name="FKtiqb6jd832560kyywoq13q80k">
+    <foreign-key id="355" parent="324" name="FKtiqb6jd832560kyywoq13q80k">
       <ColNames>book_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>Books</RefTableName>
     </foreign-key>
-    <foreign-key id="357" parent="324" name="FKaxgvyx3wbahyi0q7194w5epgi">
+    <foreign-key id="356" parent="324" name="FKaxgvyx3wbahyi0q7194w5epgi">
       <ColNames>user_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="358" parent="324" name="PRIMARY">
+    <index id="357" parent="324" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="359" parent="324" name="FKtiqb6jd832560kyywoq13q80k">
+    <index id="358" parent="324" name="FKtiqb6jd832560kyywoq13q80k">
       <ColNames>book_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="360" parent="324" name="FKaxgvyx3wbahyi0q7194w5epgi">
+    <index id="359" parent="324" name="FKaxgvyx3wbahyi0q7194w5epgi">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="361" parent="324" name="PRIMARY">
+    <key id="360" parent="324" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

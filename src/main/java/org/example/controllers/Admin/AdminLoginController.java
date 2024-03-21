@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.custom.UserBO;
@@ -73,14 +74,14 @@ public class AdminLoginController {
         }
 
     }
+
     @FXML
     void initialize() {
         // Load the list of users when the controller is initialized
         users = userBO.getAll();
 
-        // Add a listener to the username text field to monitor text changes
+        // Call the method to display the password when the username changes
         txtName.textProperty().addListener((observable, oldValue, newValue) -> {
-            // Call the method to display the password based on the entered username
             displayPassword(newValue);
         });
     }
@@ -89,8 +90,7 @@ public class AdminLoginController {
 
     // Method to display the password based on the entered username
     private void displayPassword(String username) {
-        // Check if the username is at least half entered
-        if (username.length() >= txtName.getLength() / 2) {
+        if (!username.isEmpty()) {
             // Find the user with the entered username
             for (Users user : users) {
                 if (user.getName().startsWith(username)) {
@@ -100,9 +100,13 @@ public class AdminLoginController {
                 }
             }
         } else {
-            // Clear the password field if the username is less than half entered
+            // Clear the password field if the username is empty
             txtPassword.clear();
         }
     }
 
+
+
+    public void eyeOnAction(MouseEvent mouseEvent) {
+    }
 }

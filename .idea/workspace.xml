@@ -5,19 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6023edfd-7dd2-4fd7-a525-1304da38944a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ecb1f3c3-0a77-4cd1-aa74-4c2b977c79a4/storage_v2/_src_/schema/BookWorm.vD1Yew.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BookHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BookHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TM/UserTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TM/UserTm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/Books_UsersBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/Books_UsersBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/Books_UsersBOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/Books_UsersBOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/AdminLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/AdminLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BookMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BookMngController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BranchMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/BranchMngController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/UserMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/Admin/UserMngController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/RejistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserSettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/BooksDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/BooksDAOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/UserDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/UserDAOimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/BookMng.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserMng.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/ReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/User/UserHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/Books_UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/Books_UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/Books_UsersDAOimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/Books_UsersDAOimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Books_Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminDash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AdminLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AdminLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/Registration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/UserDash.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +130,13 @@
       <workItem from="1710442450747" duration="427000" />
       <workItem from="1710468851458" duration="748000" />
       <workItem from="1710469634250" duration="22542000" />
-      <workItem from="1710504691813" duration="15324000" />
+      <workItem from="1710504691813" duration="15565000" />
+      <workItem from="1710557681078" duration="47000" />
+      <workItem from="1710572370865" duration="580000" />
+      <workItem from="1710644079857" duration="10409000" />
+      <workItem from="1710691252789" duration="4062000" />
+      <workItem from="1710731315549" duration="6510000" />
+      <workItem from="1710991499912" duration="141000" />
     </task>
     <servers />
   </component>
